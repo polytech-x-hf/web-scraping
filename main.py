@@ -30,10 +30,9 @@ def GetCharactersLinks(pageLink, charsListLink, charactersClass):
                     charsLinks.append(tmpLinks[i])
                     charsNames.append(tmpNames[i])
             else:
-                varUseless1 = "nique l'indentation de python"
                 if(len(tmpNames) != len(tmpLinks)):
                     varUseless1 = "nique l'indentation de python"
-                    #print("Va debugger enculé")
+                    #print("debug pls")
                 else:
                     varUseless1 = "nique l'indentation de python"
                     #print("No item in this category : " + charsListLink + linkSuffixe)
