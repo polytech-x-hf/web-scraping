@@ -7,7 +7,6 @@ def GetImageFromLink(link, imageClass, imageName, savePath):  # OK
     tmp = requests.get(link)
     html_doc = tmp.text
     soup = BeautifulSoup(html_doc, 'html.parser')
-    # a = soup.find_all('a', id = targetedID)
     a = soup.find_all('a', class_=imageClass, limit=1)
     imgLinks = []
     for link in a:
@@ -15,7 +14,7 @@ def GetImageFromLink(link, imageClass, imageName, savePath):  # OK
     if(len(imgLinks) >= 1):
         urlretrieve(imgLinks[0], savePath + "/" + imageName)
 
-# renvoie les nom des perso et le lien de la page des persos
+# Returns character's name and page links
 
 
 def GetCharactersLinks(pageLink, charsListLink, charactersClass):
@@ -27,20 +26,16 @@ def GetCharactersLinks(pageLink, charsListLink, charactersClass):
     a = soup.find_all('a', class_=charactersClass)
     for link in a:
         linkSuffixe = link.get('href')
-        if ("Category:" in linkSuffixe):  # la fameuse syntaxe atroce
+        if ("Category:" in linkSuffixe):
             (tmpNames, tmpLinks) = GetCharactersLinks(
                 pageLink, charsListLink + linkSuffixe, charactersClass)
             if(len(tmpNames) == len(tmpLinks) and len(tmpNames) != 0):
                 for i in range(0, len(tmpNames)):
                     charsLinks.append(tmpLinks[i])
                     charsNames.append(tmpNames[i])
-            else:
-                if(len(tmpNames) != len(tmpLinks)):
-                    varUseless1 = "nique l'indentation de python"
-                    #print("debug pls")
-                else:
-                    varUseless1 = "nique l'indentation de python"
-                    #print("No item in this category : " + charsListLink + linkSuffixe)
+
+            elif(len(tmpNames) != len(tmpLinks)):
+                print("ERROR: size exceeded")
         else:
             charsLinks.append(pageLink + linkSuffixe)
             charsNames.append(link.get('title'))
@@ -48,6 +43,9 @@ def GetCharactersLinks(pageLink, charsListLink, charactersClass):
     return (charsNames, charsLinks)
 
 
+# main.py
+
+# Core datas
 pageLink = "https://jojo.fandom.com/"
 charsListLink = "https://jojo.fandom.com/wiki/Category:Characters"
 charactersClass = "category-page__member-link"
