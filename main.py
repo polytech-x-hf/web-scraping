@@ -1,71 +1,27 @@
-from bs4 import BeautifulSoup
-import requests
-from urllib.request import urlretrieve
+# coding=utf-8
+# Copyright 2022, Polytech Sorbonne and HuggingFace Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+""" Web scrapping utils"""
 
+from const import *
+from Class.WebSrapping import *
 
-def GetImageFromLink(link, imageClass, imageName, savePath):  # OK
-    tmp = requests.get(link)
-    html_doc = tmp.text
-    soup = BeautifulSoup(html_doc, 'html.parser')
-    a = soup.find_all('a', class_=imageClass, limit=1)
-    imgLinks = []
-    for link in a:
-        imgLinks.append(link.get('href'))
-    if(len(imgLinks) >= 1):
-        urlretrieve(imgLinks[0], savePath + "/" + imageName)
+def main():
+    save_dataset(False, False)
+    dataSet = create_dataset(True, False)
+    file = open(".dataSetJSON.txt", "a")
+    #file.write(dataSet.to_JSON())
 
-# Returns character's name and page links
-
-
-def GetCharactersLinks(pageLink, charsListLink, charactersClass):
-    charsNames = []
-    charsLinks = []
-    tmp = requests.get(charsListLink)
-    html_doc = tmp.text
-    soup = BeautifulSoup(html_doc, 'html.parser')
-    a = soup.find_all('a', class_=charactersClass)
-    for link in a:
-        linkSuffixe = link.get('href')
-        if ("Category:" in linkSuffixe):
-            (tmpNames, tmpLinks) = GetCharactersLinks(
-                pageLink, charsListLink + linkSuffixe, charactersClass)
-            if(len(tmpNames) == len(tmpLinks) and len(tmpNames) != 0):
-                for i in range(0, len(tmpNames)):
-                    charsLinks.append(tmpLinks[i])
-                    charsNames.append(tmpNames[i])
-
-            elif(len(tmpNames) != len(tmpLinks)):
-                print("ERROR: size exceeded")
-        else:
-            charsLinks.append(pageLink + linkSuffixe)
-            charsNames.append(link.get('title'))
-
-    return (charsNames, charsLinks)
-
-
-# main.py
-
-# Core datas
-pageLink = "https://jojo.fandom.com/"
-charsListLink = "https://jojo.fandom.com/wiki/Category:Characters"
-charactersClass = "category-page__member-link"
-targetedClass = "image image-thumbnail"
-
-
-def SaveAllImagesAndNamesWithLink(mainPageLink, charsListLink, charactersClass, imageClass, imagesName, imageExtension, fileTextName, path):
-
-    (charsName, charLinks) = GetCharactersLinks(
-        mainPageLink, charsListLink, charactersClass)
-    if(len(charLinks) != len(charsName)):
-        print("charsListLink and charsName doesn't have the same len")
-        return
-    file = open(path + "/" + fileTextName, "a")
-    for i in range(0, len(charLinks)):
-        GetImageFromLink(charLinks[i], imageClass,
-                         imagesName + str(i) + imageExtension, path)
-        file.write(charsName[i] + "\n")
-    file.close()
-
-
-SaveAllImagesAndNamesWithLink(pageLink, charsListLink, charactersClass, targetedClass,
-                              "Jojos image", ".jpg", "Jojos Characters Names.txt", "./CharsImages")
+if(__name__ == "__main__"):
+    main()
