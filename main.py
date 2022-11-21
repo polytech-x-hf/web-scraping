@@ -12,7 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-""" Web scrapping utils"""
+""" Web scrapping tool to scrap any text / image pair from the web"""
 
 from const import *
 from Class.WebSrapping import *
