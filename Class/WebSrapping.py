@@ -34,15 +34,13 @@ def get_characters_links(page_link:str, chars_list_link:str, characters_class:st
     for link in links:
         link_suffixe = link.get('href')
         if ("Category:" in link_suffixe):
-            (tmp_names, lst_tmp_links) = get_characters_links(page_link, chars_list_link + link_suffixe, characters_class)
+            (tmp_names, lst_tmp_links) = get_characters_links(page_link, page_link + link_suffixe, characters_class)
             if(len(tmp_names) == len(lst_tmp_links) and len(tmp_names) != 0):
                 for i in range(0, len(tmp_names)):
                     chars_links.append(lst_tmp_links[i])
                     chars_names.append(tmp_names[i])
-            elif(len(tmp_names) == len(lst_tmp_links)):
-                raise(
-                    ValueError("ERROR : size exceeded")
-                )
+            elif(len(tmp_names) != len(lst_tmp_links)):
+                raise(ValueError("ERROR : size exceeded"))
         else:
             chars_links.append(page_link + link_suffixe)
             chars_names.append(link.get('title'))
@@ -58,19 +56,29 @@ def save_all_images_and_names_with_link(main_page_link:str, chars_list_link:str,
         os.mkdir(path)
     (chars_name, char_links) = get_characters_links(main_page_link, chars_list_link, characters_class)
     if(len(char_links) != len(chars_name)):
-        raise ValueError(
-            "ERROR : charsListLink and charsName doesn't have the same len"
-            )
+        raise ValueError("ERROR : charsListLink and charsName doesn't have the same len")
+
     file = open(path + "/" + file_text_name, "a")
+
+    index = 0
+    while len(char_links) > 0:
+        name = chars_name.pop(0)
+        link = char_links.pop(0)
+        if (not name in chars_name) and (not link in char_links):
+            get_image_from_link(link, image_class, images_name + str(index) + image_extension, path)
+            file.write(name + "\n")
+            index += 1
+
+    """
     for i in range(0, len(char_links)):
         get_image_from_link(char_links[i], image_class, images_name + str(i) + image_extension, path)
         file.write(chars_name[i] + "\n")
+    """
     file.close()
 
 def save_dataset(jojos_data = True, onepieces_data = True):
     """"
         Download files and set data content in the data directory
-        
     """
     if(not os.path.exists(DATASET_PATH)):
         os.mkdir(DATASET_PATH)
