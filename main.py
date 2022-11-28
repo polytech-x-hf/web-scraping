@@ -19,9 +19,9 @@ from Class.WebSrapping import save_dataset
 
 def main():
     #save_dataset(True, False)
-    #dataSet = create_dataset(True, False)
-    #file = open(".dataSetJSON.txt", "a")
-    #file.write(dataSet.to_JSON())
+    dataSet = create_dataset(True, False)
+    file = open("dataSetJSON.json", "a")
+    file.write(dataSet.to_JSON())
     pass
 
 if(__name__ == "__main__"):
