@@ -17,7 +17,26 @@
 from Class.WebSrapping import create_dataset 
 from Class.WebSrapping import save_dataset 
 
+import argparse
+
+def get_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dataset_path", type=str, help="Path to the final dataset", required=True)
+    #parser.add_argument("--dataset-image-extension", type=str, help="Extension of image files", required=True)
+    #parser.add_argument("--page-link", type=str, help="Page link", required=True)
+    #parser.add_argument("--chars-list-link", type=str, help="Page link of the character list", required=True)
+    #parser.add_argument("--character-class", type=str, help="Class of the characters", required=True)
+    #parser.add_argument("--target-class", type=str, help="Image of the character", required=True)
+    #parser.add_argument("--char-name-filename", type=str, help="Name of character names file", required=True)
+    #parser.add_argument("--dataset-path", type=str, help="Path of the dataset", required=True)
+    #parser.add_argument("--image-name", type=str, help="Character image file name", required=True)
+
+    return parser.parse_args()
+
 def main():
+    args = get_args()
+    dataset_path = args.dataset_path
+
     #save_dataset(True, False)
     dataSet = create_dataset(True, False)
     file = open("dataSetJSON.json", "a")
