@@ -1,0 +1,2168 @@
+{
+    "items": [
+        {
+            "char_name": "Nazis",
+            "image_name": "JojosImages0.jpg"
+        },
+        {
+            "char_name": "Template:Part 2 Characters",
+            "image_name": "JojosImages1.jpg"
+        },
+        {
+            "char_name": "Template:Part 4 Characters",
+            "image_name": "JojosImages2.jpg"
+        },
+        {
+            "char_name": "Template:Part 8 Characters",
+            "image_name": "JojosImages3.jpg"
+        },
+        {
+            "char_name": "Tsukumojuku Kato",
+            "image_name": "JojosImages4.jpg"
+        },
+        {
+            "char_name": "Walken",
+            "image_name": "JojosImages5.jpg"
+        },
+        {
+            "char_name": "Yoma Hashimoto",
+            "image_name": "JojosImages6.jpg"
+        },
+        {
+            "char_name": "Yoshiki",
+            "image_name": "JojosImages7.jpg"
+        },
+        {
+            "char_name": "Template:Part 1 Characters",
+            "image_name": "JojosImages8.jpg"
+        },
+        {
+            "char_name": "Template:Part 3 Characters",
+            "image_name": "JojosImages9.jpg"
+        },
+        {
+            "char_name": "Template:Part 7 Characters",
+            "image_name": "JojosImages10.jpg"
+        },
+        {
+            "char_name": "Template:Part 6 Characters",
+            "image_name": "JojosImages11.jpg"
+        },
+        {
+            "char_name": "Template:Passione",
+            "image_name": "JojosImages12.jpg"
+        },
+        {
+            "char_name": "Sezione Droghe",
+            "image_name": "JojosImages13.jpg"
+        },
+        {
+            "char_name": "Sezione Gestione sistemi informatici",
+            "image_name": "JojosImages14.jpg"
+        },
+        {
+            "char_name": "Passione",
+            "image_name": "JojosImages15.jpg"
+        },
+        {
+            "char_name": "Template:Part 5 Characters",
+            "image_name": "JojosImages16.jpg"
+        },
+        {
+            "char_name": "List of Horses in Steel Ball Run",
+            "image_name": "JojosImages17.jpg"
+        },
+        {
+            "char_name": "Noguchi",
+            "image_name": "JojosImages18.jpg"
+        },
+        {
+            "char_name": "Sumire",
+            "image_name": "JojosImages19.jpg"
+        },
+        {
+            "char_name": "Yamaoka",
+            "image_name": "JojosImages20.jpg"
+        },
+        {
+            "char_name": "Jesus",
+            "image_name": "JojosImages21.jpg"
+        },
+        {
+            "char_name": "Sadao Kujo",
+            "image_name": "JojosImages22.jpg"
+        },
+        {
+            "char_name": "Rocky",
+            "image_name": "JojosImages23.jpg"
+        },
+        {
+            "char_name": "Shuichi",
+            "image_name": "JojosImages24.jpg"
+        },
+        {
+            "char_name": "Steven Motorize",
+            "image_name": "JojosImages25.jpg"
+        },
+        {
+            "char_name": "User blog:Stickeyhermit/re: Allstar roster",
+            "image_name": "JojosImages26.jpg"
+        },
+        {
+            "char_name": "Dododo De Dadada",
+            "image_name": "JojosImages27.jpg"
+        },
+        {
+            "char_name": "Bad Romance",
+            "image_name": "JojosImages28.jpg"
+        },
+        {
+            "char_name": "Dune",
+            "image_name": "JojosImages29.jpg"
+        },
+        {
+            "char_name": "Crazy Diamond",
+            "image_name": "JojosImages30.jpg"
+        },
+        {
+            "char_name": "Bad Company",
+            "image_name": "JojosImages31.jpg"
+        },
+        {
+            "char_name": "Boy II Man",
+            "image_name": "JojosImages32.jpg"
+        },
+        {
+            "char_name": "Cinderella",
+            "image_name": "JojosImages33.jpg"
+        },
+        {
+            "char_name": "Enigma",
+            "image_name": "JojosImages34.jpg"
+        },
+        {
+            "char_name": "Dirty Deeds Done Dirt Cheap",
+            "image_name": "JojosImages35.jpg"
+        },
+        {
+            "char_name": "Dirty Deeds Done Dirt Cheap: Love Train",
+            "image_name": "JojosImages36.jpg"
+        },
+        {
+            "char_name": "The Hand",
+            "image_name": "JojosImages37.jpg"
+        },
+        {
+            "char_name": "Heaven's Door",
+            "image_name": "JojosImages38.jpg"
+        },
+        {
+            "char_name": "Awaking III Leaves",
+            "image_name": "JojosImages39.jpg"
+        },
+        {
+            "char_name": "Blue Hawaii",
+            "image_name": "JojosImages40.jpg"
+        },
+        {
+            "char_name": "Born This Way",
+            "image_name": "JojosImages41.jpg"
+        },
+        {
+            "char_name": "Brain Storm",
+            "image_name": "JojosImages42.jpg"
+        },
+        {
+            "char_name": "California King Bed",
+            "image_name": "JojosImages43.jpg"
+        },
+        {
+            "char_name": "Doggy Style",
+            "image_name": "JojosImages44.jpg"
+        },
+        {
+            "char_name": "Doobie Wah!",
+            "image_name": "JojosImages45.jpg"
+        },
+        {
+            "char_name": "Fun Fun Fun",
+            "image_name": "JojosImages46.jpg"
+        },
+        {
+            "char_name": "I Am a Rock",
+            "image_name": "JojosImages47.jpg"
+        },
+        {
+            "char_name": "Walking Heart",
+            "image_name": "JojosImages48.jpg"
+        },
+        {
+            "char_name": "Killer Queen (JoJolion)",
+            "image_name": "JojosImages49.jpg"
+        },
+        {
+            "char_name": "Arrow Cross House",
+            "image_name": "JojosImages50.jpg"
+        },
+        {
+            "char_name": "Blue Thunder",
+            "image_name": "JojosImages51.jpg"
+        },
+        {
+            "char_name": "The Cure",
+            "image_name": "JojosImages52.jpg"
+        },
+        {
+            "char_name": "Dark Mirage",
+            "image_name": "JojosImages53.jpg"
+        },
+        {
+            "char_name": "Grand Bleu",
+            "image_name": "JojosImages54.jpg"
+        },
+        {
+            "char_name": "Joy Division",
+            "image_name": "JojosImages55.jpg"
+        },
+        {
+            "char_name": "Manic Depression",
+            "image_name": "JojosImages56.jpg"
+        },
+        {
+            "char_name": "Purple Haze Distortion",
+            "image_name": "JojosImages57.jpg"
+        },
+        {
+            "char_name": "Voodoo Child",
+            "image_name": "JojosImages58.jpg"
+        },
+        {
+            "char_name": "All Along Watchtower",
+            "image_name": "JojosImages59.jpg"
+        },
+        {
+            "char_name": "Aqua Necklace",
+            "image_name": "JojosImages60.jpg"
+        },
+        {
+            "char_name": "Harvest",
+            "image_name": "JojosImages61.jpg"
+        },
+        {
+            "char_name": "Highway Star",
+            "image_name": "JojosImages62.jpg"
+        },
+        {
+            "char_name": "King Nothing",
+            "image_name": "JojosImages63.jpg"
+        },
+        {
+            "char_name": "Nightbird Flying",
+            "image_name": "JojosImages64.jpg"
+        },
+        {
+            "char_name": "Love Deluxe",
+            "image_name": "JojosImages65.jpg"
+        },
+        {
+            "char_name": "Love Love Deluxe",
+            "image_name": "JojosImages66.jpg"
+        },
+        {
+            "char_name": "Moody Blues",
+            "image_name": "JojosImages67.jpg"
+        },
+        {
+            "char_name": "Nut King Call",
+            "image_name": "JojosImages68.jpg"
+        },
+        {
+            "char_name": "NYPD Blue",
+            "image_name": "JojosImages69.jpg"
+        },
+        {
+            "char_name": "Assy the Horse",
+            "image_name": "JojosImages70.jpg"
+        },
+        {
+            "char_name": "Berry Berry Skull",
+            "image_name": "JojosImages71.jpg"
+        },
+        {
+            "char_name": "House of Holy",
+            "image_name": "JojosImages72.jpg"
+        },
+        {
+            "char_name": "JoJosapiens",
+            "image_name": "JojosImages73.jpg"
+        },
+        {
+            "char_name": "Love Note",
+            "image_name": "JojosImages74.jpg"
+        },
+        {
+            "char_name": "The World Over Heaven",
+            "image_name": "JojosImages75.jpg"
+        },
+        {
+            "char_name": "Ozon Baby",
+            "image_name": "JojosImages76.jpg"
+        },
+        {
+            "char_name": "Template:Part 4 Stands",
+            "image_name": "JojosImages77.jpg"
+        },
+        {
+            "char_name": "Template:Part 8 Stands",
+            "image_name": "JojosImages78.jpg"
+        },
+        {
+            "char_name": "Template:Part 9 Stands",
+            "image_name": "JojosImages79.jpg"
+        },
+        {
+            "char_name": "Pearl Jam",
+            "image_name": "JojosImages80.jpg"
+        },
+        {
+            "char_name": "User blog:ProfessionalUse/Ruler Red",
+            "image_name": "JojosImages81.jpg"
+        },
+        {
+            "char_name": "Red Hot Chili Pepper",
+            "image_name": "JojosImages82.jpg"
+        },
+        {
+            "char_name": "Remote Romance",
+            "image_name": "JojosImages83.jpg"
+        },
+        {
+            "char_name": "Killer Queen",
+            "image_name": "JojosImages84.jpg"
+        },
+        {
+            "char_name": "Satanic Coupler",
+            "image_name": "JojosImages85.jpg"
+        },
+        {
+            "char_name": "Schott Key No.2",
+            "image_name": "JojosImages86.jpg"
+        },
+        {
+            "char_name": "Paisley Park",
+            "image_name": "JojosImages87.jpg"
+        },
+        {
+            "char_name": "Ball Breaker",
+            "image_name": "JojosImages88.jpg"
+        },
+        {
+            "char_name": "Ratt",
+            "image_name": "JojosImages89.jpg"
+        },
+        {
+            "char_name": "Singing in the Rain",
+            "image_name": "JojosImages90.jpg"
+        },
+        {
+            "char_name": "Soft & Wet",
+            "image_name": "JojosImages91.jpg"
+        },
+        {
+            "char_name": "Space Trucking",
+            "image_name": "JojosImages92.jpg"
+        },
+        {
+            "char_name": "Speed King",
+            "image_name": "JojosImages93.jpg"
+        },
+        {
+            "char_name": "Spice Girl",
+            "image_name": "JojosImages94.jpg"
+        },
+        {
+            "char_name": "Template:Stand",
+            "image_name": "JojosImages95.jpg"
+        },
+        {
+            "char_name": "Stand",
+            "image_name": "JojosImages96.jpg"
+        },
+        {
+            "char_name": "Stand Growth",
+            "image_name": "JojosImages97.jpg"
+        },
+        {
+            "char_name": "Stand Types",
+            "image_name": "JojosImages98.jpg"
+        },
+        {
+            "char_name": "Template:Stands List",
+            "image_name": "JojosImages99.jpg"
+        },
+        {
+            "char_name": "Atum",
+            "image_name": "JojosImages100.jpg"
+        },
+        {
+            "char_name": "Cream",
+            "image_name": "JojosImages101.jpg"
+        },
+        {
+            "char_name": "Dark Blue Moon",
+            "image_name": "JojosImages102.jpg"
+        },
+        {
+            "char_name": "Death Thirteen",
+            "image_name": "JojosImages103.jpg"
+        },
+        {
+            "char_name": "Ebony Devil",
+            "image_name": "JojosImages104.jpg"
+        },
+        {
+            "char_name": "The Fool",
+            "image_name": "JojosImages105.jpg"
+        },
+        {
+            "char_name": "Geb",
+            "image_name": "JojosImages106.jpg"
+        },
+        {
+            "char_name": "Hanged Man",
+            "image_name": "JojosImages107.jpg"
+        },
+        {
+            "char_name": "Hermit Purple",
+            "image_name": "JojosImages108.jpg"
+        },
+        {
+            "char_name": "Hierophant Green",
+            "image_name": "JojosImages109.jpg"
+        },
+        {
+            "char_name": "High Priestess",
+            "image_name": "JojosImages110.jpg"
+        },
+        {
+            "char_name": "Horus",
+            "image_name": "JojosImages111.jpg"
+        },
+        {
+            "char_name": "Judgement",
+            "image_name": "JojosImages112.jpg"
+        },
+        {
+            "char_name": "Justice",
+            "image_name": "JojosImages113.jpg"
+        },
+        {
+            "char_name": "Lovers",
+            "image_name": "JojosImages114.jpg"
+        },
+        {
+            "char_name": "Magician's Red",
+            "image_name": "JojosImages115.jpg"
+        },
+        {
+            "char_name": "Osiris",
+            "image_name": "JojosImages116.jpg"
+        },
+        {
+            "char_name": "Template:Part 3 Stands",
+            "image_name": "JojosImages117.jpg"
+        },
+        {
+            "char_name": "Sethan",
+            "image_name": "JojosImages118.jpg"
+        },
+        {
+            "char_name": "Wheel of Fortune",
+            "image_name": "JojosImages119.jpg"
+        },
+        {
+            "char_name": "Yellow Temperance",
+            "image_name": "JojosImages120.jpg"
+        },
+        {
+            "char_name": "Boku no Rhythm wo Kiitekure",
+            "image_name": "JojosImages121.jpg"
+        },
+        {
+            "char_name": "Civil War",
+            "image_name": "JojosImages122.jpg"
+        },
+        {
+            "char_name": "Hey Ya!",
+            "image_name": "JojosImages123.jpg"
+        },
+        {
+            "char_name": "In a Silent Way",
+            "image_name": "JojosImages124.jpg"
+        },
+        {
+            "char_name": "Mandom",
+            "image_name": "JojosImages125.jpg"
+        },
+        {
+            "char_name": "Template:Part 7 Stands",
+            "image_name": "JojosImages126.jpg"
+        },
+        {
+            "char_name": "The World (Steel Ball Run)",
+            "image_name": "JojosImages127.jpg"
+        },
+        {
+            "char_name": "Burning Down the House",
+            "image_name": "JojosImages128.jpg"
+        },
+        {
+            "char_name": "C-Moon",
+            "image_name": "JojosImages129.jpg"
+        },
+        {
+            "char_name": "Star Platinum",
+            "image_name": "JojosImages130.jpg"
+        },
+        {
+            "char_name": "Diver Down",
+            "image_name": "JojosImages131.jpg"
+        },
+        {
+            "char_name": "Dragon's Dream",
+            "image_name": "JojosImages132.jpg"
+        },
+        {
+            "char_name": "Goo Goo Dolls",
+            "image_name": "JojosImages133.jpg"
+        },
+        {
+            "char_name": "Green, Green Grass of Home",
+            "image_name": "JojosImages134.jpg"
+        },
+        {
+            "char_name": "Highway to Hell",
+            "image_name": "JojosImages135.jpg"
+        },
+        {
+            "char_name": "Jail House Lock",
+            "image_name": "JojosImages136.jpg"
+        },
+        {
+            "char_name": "Jumpin' Jack Flash",
+            "image_name": "JojosImages137.jpg"
+        },
+        {
+            "char_name": "Kiss",
+            "image_name": "JojosImages138.jpg"
+        },
+        {
+            "char_name": "Made in Heaven",
+            "image_name": "JojosImages139.jpg"
+        },
+        {
+            "char_name": "Manhattan Transfer",
+            "image_name": "JojosImages140.jpg"
+        },
+        {
+            "char_name": "Marilyn Manson",
+            "image_name": "JojosImages141.jpg"
+        },
+        {
+            "char_name": "Template:Part 6 Stands",
+            "image_name": "JojosImages142.jpg"
+        },
+        {
+            "char_name": "Planet Waves",
+            "image_name": "JojosImages143.jpg"
+        },
+        {
+            "char_name": "Weather Report (Stand)",
+            "image_name": "JojosImages144.jpg"
+        },
+        {
+            "char_name": "The World",
+            "image_name": "JojosImages145.jpg"
+        },
+        {
+            "char_name": "Strange Relation",
+            "image_name": "JojosImages146.jpg"
+        },
+        {
+            "char_name": "Strength",
+            "image_name": "JojosImages147.jpg"
+        },
+        {
+            "char_name": "Sun",
+            "image_name": "JojosImages148.jpg"
+        },
+        {
+            "char_name": "Survivor",
+            "image_name": "JojosImages149.jpg"
+        },
+        {
+            "char_name": "The Passion",
+            "image_name": "JojosImages150.jpg"
+        },
+        {
+            "char_name": "The World Ultimate",
+            "image_name": "JojosImages151.jpg"
+        },
+        {
+            "char_name": "Tomb of the Boom",
+            "image_name": "JojosImages152.jpg"
+        },
+        {
+            "char_name": "Tower of Gray",
+            "image_name": "JojosImages153.jpg"
+        },
+        {
+            "char_name": "U-Boat",
+            "image_name": "JojosImages154.jpg"
+        },
+        {
+            "char_name": "Under World",
+            "image_name": "JojosImages155.jpg"
+        },
+        {
+            "char_name": "Aerosmith",
+            "image_name": "JojosImages156.jpg"
+        },
+        {
+            "char_name": "Black Sabbath",
+            "image_name": "JojosImages157.jpg"
+        },
+        {
+            "char_name": "Clash",
+            "image_name": "JojosImages158.jpg"
+        },
+        {
+            "char_name": "Echoes",
+            "image_name": "JojosImages159.jpg"
+        },
+        {
+            "char_name": "Gold Experience",
+            "image_name": "JojosImages160.jpg"
+        },
+        {
+            "char_name": "Gold Experience Requiem",
+            "image_name": "JojosImages161.jpg"
+        },
+        {
+            "char_name": "The Grateful Dead",
+            "image_name": "JojosImages162.jpg"
+        },
+        {
+            "char_name": "Green Day",
+            "image_name": "JojosImages163.jpg"
+        },
+        {
+            "char_name": "Achtung Baby",
+            "image_name": "JojosImages164.jpg"
+        },
+        {
+            "char_name": "Bohemian Rhapsody",
+            "image_name": "JojosImages165.jpg"
+        },
+        {
+            "char_name": "Doctor Wu",
+            "image_name": "JojosImages166.jpg"
+        },
+        {
+            "char_name": "Earth Wind and Fire",
+            "image_name": "JojosImages167.jpg"
+        },
+        {
+            "char_name": "Khnum",
+            "image_name": "JojosImages168.jpg"
+        },
+        {
+            "char_name": "Limp Bizkit",
+            "image_name": "JojosImages169.jpg"
+        },
+        {
+            "char_name": "Memory of Jet",
+            "image_name": "JojosImages170.jpg"
+        },
+        {
+            "char_name": "Oh! Lonesome Me",
+            "image_name": "JojosImages171.jpg"
+        },
+        {
+            "char_name": "Paper Moon King",
+            "image_name": "JojosImages172.jpg"
+        },
+        {
+            "char_name": "Rainy Day Dream Away",
+            "image_name": "JojosImages173.jpg"
+        },
+        {
+            "char_name": "Scary Monsters",
+            "image_name": "JojosImages174.jpg"
+        },
+        {
+            "char_name": "Schott Key No.1",
+            "image_name": "JojosImages175.jpg"
+        },
+        {
+            "char_name": "Stone Free",
+            "image_name": "JojosImages176.jpg"
+        },
+        {
+            "char_name": "Stray Cat",
+            "image_name": "JojosImages177.jpg"
+        },
+        {
+            "char_name": "Sugar Mountain (Stand)",
+            "image_name": "JojosImages178.jpg"
+        },
+        {
+            "char_name": "Tatoo You!",
+            "image_name": "JojosImages179.jpg"
+        },
+        {
+            "char_name": "Tenore Sax",
+            "image_name": "JojosImages180.jpg"
+        },
+        {
+            "char_name": "Ticket to Ride",
+            "image_name": "JojosImages181.jpg"
+        },
+        {
+            "char_name": "Tubular Bells",
+            "image_name": "JojosImages182.jpg"
+        },
+        {
+            "char_name": "Tusk",
+            "image_name": "JojosImages183.jpg"
+        },
+        {
+            "char_name": "King Crimson",
+            "image_name": "JojosImages184.jpg"
+        },
+        {
+            "char_name": "Kraft Work",
+            "image_name": "JojosImages185.jpg"
+        },
+        {
+            "char_name": "List of Unnamed Stands",
+            "image_name": "JojosImages186.jpg"
+        },
+        {
+            "char_name": "Little Feet",
+            "image_name": "JojosImages187.jpg"
+        },
+        {
+            "char_name": "Man in the Mirror",
+            "image_name": "JojosImages188.jpg"
+        },
+        {
+            "char_name": "Metallica",
+            "image_name": "JojosImages189.jpg"
+        },
+        {
+            "char_name": "Mr. President",
+            "image_name": "JojosImages190.jpg"
+        },
+        {
+            "char_name": "Oasis",
+            "image_name": "JojosImages191.jpg"
+        },
+        {
+            "char_name": "Template:Part 5 Stands",
+            "image_name": "JojosImages192.jpg"
+        },
+        {
+            "char_name": "Purple Haze",
+            "image_name": "JojosImages193.jpg"
+        },
+        {
+            "char_name": "Rolling Stones",
+            "image_name": "JojosImages194.jpg"
+        },
+        {
+            "char_name": "Sex Pistols",
+            "image_name": "JojosImages195.jpg"
+        },
+        {
+            "char_name": "Silver Chariot",
+            "image_name": "JojosImages196.jpg"
+        },
+        {
+            "char_name": "Soft Machine",
+            "image_name": "JojosImages197.jpg"
+        },
+        {
+            "char_name": "Sticky Fingers",
+            "image_name": "JojosImages198.jpg"
+        },
+        {
+            "char_name": "Talking Head",
+            "image_name": "JojosImages199.jpg"
+        },
+        {
+            "char_name": "20th Century Boy",
+            "image_name": "JojosImages200.jpg"
+        },
+        {
+            "char_name": "Atom Heart Father",
+            "image_name": "JojosImages201.jpg"
+        },
+        {
+            "char_name": "Bastet",
+            "image_name": "JojosImages202.jpg"
+        },
+        {
+            "char_name": "Beach Boy",
+            "image_name": "JojosImages203.jpg"
+        },
+        {
+            "char_name": "The Book",
+            "image_name": "JojosImages204.jpg"
+        },
+        {
+            "char_name": "Catch the Rainbow",
+            "image_name": "JojosImages205.jpg"
+        },
+        {
+            "char_name": "Chocolate Disco",
+            "image_name": "JojosImages206.jpg"
+        },
+        {
+            "char_name": "Cream Starter",
+            "image_name": "JojosImages207.jpg"
+        },
+        {
+            "char_name": "Dolly Dagger",
+            "image_name": "JojosImages208.jpg"
+        },
+        {
+            "char_name": "Emperor",
+            "image_name": "JojosImages209.jpg"
+        },
+        {
+            "char_name": "The Lock",
+            "image_name": "JojosImages210.jpg"
+        },
+        {
+            "char_name": "Ptah",
+            "image_name": "JojosImages211.jpg"
+        },
+        {
+            "char_name": "Public Image Limited",
+            "image_name": "JojosImages212.jpg"
+        },
+        {
+            "char_name": "Sky High",
+            "image_name": "JojosImages213.jpg"
+        },
+        {
+            "char_name": "Super Fly",
+            "image_name": "JojosImages214.jpg"
+        },
+        {
+            "char_name": "Surface",
+            "image_name": "JojosImages215.jpg"
+        },
+        {
+            "char_name": "Tohth",
+            "image_name": "JojosImages216.jpg"
+        },
+        {
+            "char_name": "Wired",
+            "image_name": "JojosImages217.jpg"
+        },
+        {
+            "char_name": "White Album",
+            "image_name": "JojosImages218.jpg"
+        },
+        {
+            "char_name": "Vitamin C",
+            "image_name": "JojosImages219.jpg"
+        },
+        {
+            "char_name": "Boom Boom Family",
+            "image_name": "JojosImages220.jpg"
+        },
+        {
+            "char_name": "Higashikata Fruit Company",
+            "image_name": "JojosImages221.jpg"
+        },
+        {
+            "char_name": "Sheila E",
+            "image_name": "JojosImages222.jpg"
+        },
+        {
+            "char_name": "Shigetaka Yangu",
+            "image_name": "JojosImages223.jpg"
+        },
+        {
+            "char_name": "SO Episode 15",
+            "image_name": "JojosImages224.jpg"
+        },
+        {
+            "char_name": "SO Episode 16",
+            "image_name": "JojosImages225.jpg"
+        },
+        {
+            "char_name": "SO Episode 19",
+            "image_name": "JojosImages226.jpg"
+        },
+        {
+            "char_name": "Template:Agents of DIO",
+            "image_name": "JojosImages227.jpg"
+        },
+        {
+            "char_name": "Empress",
+            "image_name": "JojosImages228.jpg"
+        },
+        {
+            "char_name": "File:SC ep36 Dio & Hol Horse.png",
+            "image_name": "JojosImages229.jpg"
+        },
+        {
+            "char_name": "Rock Human",
+            "image_name": "JojosImages230.jpg"
+        },
+        {
+            "char_name": "Wonder of U",
+            "image_name": "JojosImages231.jpg"
+        },
+        {
+            "char_name": "Pillar Men",
+            "image_name": "JojosImages232.jpg"
+        },
+        {
+            "char_name": "Anubis",
+            "image_name": "JojosImages233.jpg"
+        },
+        {
+            "char_name": "Template:Valentine's Subordinates",
+            "image_name": "JojosImages234.jpg"
+        },
+        {
+            "char_name": "Funny Valentine",
+            "image_name": "JojosImages235.jpg"
+        },
+        {
+            "char_name": "Valentine's Subordinates",
+            "image_name": "JojosImages236.jpg"
+        },
+        {
+            "char_name": "Agents of DIO",
+            "image_name": "JojosImages237.jpg"
+        },
+        {
+            "char_name": "Antonio Torres",
+            "image_name": "JojosImages238.jpg"
+        },
+        {
+            "char_name": "Vampire",
+            "image_name": "JojosImages239.jpg"
+        },
+        {
+            "char_name": "Zombie",
+            "image_name": "JojosImages240.jpg"
+        },
+        {
+            "char_name": "Coniglio",
+            "image_name": "JojosImages241.jpg"
+        },
+        {
+            "char_name": "Crybaby Boy",
+            "image_name": "JojosImages242.jpg"
+        },
+        {
+            "char_name": "Kosaku Kawajiri",
+            "image_name": "JojosImages243.jpg"
+        },
+        {
+            "char_name": "Masazo Kinoto",
+            "image_name": "JojosImages244.jpg"
+        },
+        {
+            "char_name": "Ryohei Higashikata",
+            "image_name": "JojosImages245.jpg"
+        },
+        {
+            "char_name": "Tama",
+            "image_name": "JojosImages246.jpg"
+        },
+        {
+            "char_name": "Satoru Akefu",
+            "image_name": "JojosImages247.jpg"
+        },
+        {
+            "char_name": "Tamaki Damo",
+            "image_name": "JojosImages248.jpg"
+        },
+        {
+            "char_name": "Toru",
+            "image_name": "JojosImages249.jpg"
+        },
+        {
+            "char_name": "Angelica Attanasio",
+            "image_name": "JojosImages250.jpg"
+        },
+        {
+            "char_name": "Massimo Volpe",
+            "image_name": "JojosImages251.jpg"
+        },
+        {
+            "char_name": "Dario Brando",
+            "image_name": "JojosImages252.jpg"
+        },
+        {
+            "char_name": "Tarkus",
+            "image_name": "JojosImages253.jpg"
+        },
+        {
+            "char_name": "Chibi and Buchi",
+            "image_name": "JojosImages254.jpg"
+        },
+        {
+            "char_name": "Wilson Phillips",
+            "image_name": "JojosImages255.jpg"
+        },
+        {
+            "char_name": "Dot Han",
+            "image_name": "JojosImages256.jpg"
+        },
+        {
+            "char_name": "Gaucho",
+            "image_name": "JojosImages257.jpg"
+        },
+        {
+            "char_name": "Ringo Roadagain",
+            "image_name": "JojosImages258.jpg"
+        },
+        {
+            "char_name": "Diavolo",
+            "image_name": "JojosImages259.jpg"
+        },
+        {
+            "char_name": "Donatella Una",
+            "image_name": "JojosImages260.jpg"
+        },
+        {
+            "char_name": "Squadra Esecuzioni",
+            "image_name": "JojosImages261.jpg"
+        },
+        {
+            "char_name": "Unit\u00e0 Speciale",
+            "image_name": "JojosImages262.jpg"
+        },
+        {
+            "char_name": "Vinegar Doppio",
+            "image_name": "JojosImages263.jpg"
+        },
+        {
+            "char_name": "Diego Brando",
+            "image_name": "JojosImages264.jpg"
+        },
+        {
+            "char_name": "Diego Brando (Parallel World)",
+            "image_name": "JojosImages265.jpg"
+        },
+        {
+            "char_name": "Diego Brando's Mother",
+            "image_name": "JojosImages266.jpg"
+        },
+        {
+            "char_name": "Dija Maker",
+            "image_name": "JojosImages267.jpg"
+        },
+        {
+            "char_name": "Dolce",
+            "image_name": "JojosImages268.jpg"
+        },
+        {
+            "char_name": "Enrico Pucci",
+            "image_name": "JojosImages269.jpg"
+        },
+        {
+            "char_name": "Enya the Hag",
+            "image_name": "JojosImages270.jpg"
+        },
+        {
+            "char_name": "Esidisi",
+            "image_name": "JojosImages271.jpg"
+        },
+        {
+            "char_name": "Father Styx",
+            "image_name": "JojosImages272.jpg"
+        },
+        {
+            "char_name": "Fukashigi Nijimura",
+            "image_name": "JojosImages273.jpg"
+        },
+        {
+            "char_name": "Funnier Valentine",
+            "image_name": "JojosImages274.jpg"
+        },
+        {
+            "char_name": "Chiho Futaba",
+            "image_name": "JojosImages275.jpg"
+        },
+        {
+            "char_name": "Gaucher",
+            "image_name": "JojosImages276.jpg"
+        },
+        {
+            "char_name": "Ghost",
+            "image_name": "JojosImages277.jpg"
+        },
+        {
+            "char_name": "Rohan Kishibe's grandmother",
+            "image_name": "JojosImages278.jpg"
+        },
+        {
+            "char_name": "Yoshihiro Kira",
+            "image_name": "JojosImages279.jpg"
+        },
+        {
+            "char_name": "Yoshikage Kira",
+            "image_name": "JojosImages280.jpg"
+        },
+        {
+            "char_name": "Takuma Hasumi",
+            "image_name": "JojosImages281.jpg"
+        },
+        {
+            "char_name": "Heaven Ascension DIO",
+            "image_name": "JojosImages282.jpg"
+        },
+        {
+            "char_name": "Akari Hirai",
+            "image_name": "JojosImages283.jpg"
+        },
+        {
+            "char_name": "Kyoka Izumi",
+            "image_name": "JojosImages284.jpg"
+        },
+        {
+            "char_name": "Jobin Higashikata",
+            "image_name": "JojosImages285.jpg"
+        },
+        {
+            "char_name": "Kaato Higashikata",
+            "image_name": "JojosImages286.jpg"
+        },
+        {
+            "char_name": "Minoru Kaigamori",
+            "image_name": "JojosImages287.jpg"
+        },
+        {
+            "char_name": "Gunpei Kamafusa",
+            "image_name": "JojosImages288.jpg"
+        },
+        {
+            "char_name": "Nanase Kishibe",
+            "image_name": "JojosImages289.jpg"
+        },
+        {
+            "char_name": "Vladimir Kocaqi",
+            "image_name": "JojosImages290.jpg"
+        },
+        {
+            "char_name": "Koji Hirose",
+            "image_name": "JojosImages291.jpg"
+        },
+        {
+            "char_name": "Kars",
+            "image_name": "JojosImages292.jpg"
+        },
+        {
+            "char_name": "Dio Brando",
+            "image_name": "JojosImages293.jpg"
+        },
+        {
+            "char_name": "Shinobu Kawajiri",
+            "image_name": "JojosImages294.jpg"
+        },
+        {
+            "char_name": "Shizuka Joestar",
+            "image_name": "JojosImages295.jpg"
+        },
+        {
+            "char_name": "Tomoko Higashikata",
+            "image_name": "JojosImages296.jpg"
+        },
+        {
+            "char_name": "Iwasuke",
+            "image_name": "JojosImages297.jpg"
+        },
+        {
+            "char_name": "Suzuyo Hirose",
+            "image_name": "JojosImages298.jpg"
+        },
+        {
+            "char_name": "Hol Horse",
+            "image_name": "JojosImages299.jpg"
+        },
+        {
+            "char_name": "Gregorio Zeppeli",
+            "image_name": "JojosImages300.jpg"
+        },
+        {
+            "char_name": "Rina Higashikata",
+            "image_name": "JojosImages301.jpg"
+        },
+        {
+            "char_name": "Annakiss",
+            "image_name": "JojosImages302.jpg"
+        },
+        {
+            "char_name": "Irene",
+            "image_name": "JojosImages303.jpg"
+        },
+        {
+            "char_name": "Romeo Jisso",
+            "image_name": "JojosImages304.jpg"
+        },
+        {
+            "char_name": "Scolippi",
+            "image_name": "JojosImages305.jpg"
+        },
+        {
+            "char_name": "Loccobarocco",
+            "image_name": "JojosImages306.jpg"
+        },
+        {
+            "char_name": "Mai Katahira",
+            "image_name": "JojosImages307.jpg"
+        },
+        {
+            "char_name": "Narciso Anasui",
+            "image_name": "JojosImages308.jpg"
+        },
+        {
+            "char_name": "Coco Jumbo",
+            "image_name": "JojosImages309.jpg"
+        },
+        {
+            "char_name": "Ermes Costello",
+            "image_name": "JojosImages310.jpg"
+        },
+        {
+            "char_name": "Emporio Alni\u00f1o",
+            "image_name": "JojosImages311.jpg"
+        },
+        {
+            "char_name": "Guido Mista",
+            "image_name": "JojosImages312.jpg"
+        },
+        {
+            "char_name": "Gyro Zeppeli",
+            "image_name": "JojosImages313.jpg"
+        },
+        {
+            "char_name": "Hato Higashikata",
+            "image_name": "JojosImages314.jpg"
+        },
+        {
+            "char_name": "Hayato Kawajiri",
+            "image_name": "JojosImages315.jpg"
+        },
+        {
+            "char_name": "Iggy",
+            "image_name": "JojosImages316.jpg"
+        },
+        {
+            "char_name": "Josefumi Kujo",
+            "image_name": "JojosImages317.jpg"
+        },
+        {
+            "char_name": "Koichi Hirose",
+            "image_name": "JojosImages318.jpg"
+        },
+        {
+            "char_name": "Leone Abbacchio",
+            "image_name": "JojosImages319.jpg"
+        },
+        {
+            "char_name": "Lucy Steel",
+            "image_name": "JojosImages320.jpg"
+        },
+        {
+            "char_name": "Narancia Ghirga",
+            "image_name": "JojosImages321.jpg"
+        },
+        {
+            "char_name": "Reimi Sugimoto",
+            "image_name": "JojosImages322.jpg"
+        },
+        {
+            "char_name": "Steven Steel",
+            "image_name": "JojosImages323.jpg"
+        },
+        {
+            "char_name": "Team Bucciarati",
+            "image_name": "JojosImages324.jpg"
+        },
+        {
+            "char_name": "Trish Una",
+            "image_name": "JojosImages325.jpg"
+        },
+        {
+            "char_name": "Tsurugi Higashikata",
+            "image_name": "JojosImages326.jpg"
+        },
+        {
+            "char_name": "Weather Report",
+            "image_name": "JojosImages327.jpg"
+        },
+        {
+            "char_name": "Yasuho Hirose",
+            "image_name": "JojosImages328.jpg"
+        },
+        {
+            "char_name": "Yoshikage Kira (JoJolion)",
+            "image_name": "JojosImages329.jpg"
+        },
+        {
+            "char_name": "Will Anthonio Zeppeli",
+            "image_name": "JojosImages330.jpg"
+        },
+        {
+            "char_name": "Pannacotta Fugo",
+            "image_name": "JojosImages331.jpg"
+        },
+        {
+            "char_name": "Gappy",
+            "image_name": "JojosImages332.jpg"
+        },
+        {
+            "char_name": "Josuke Higashikata",
+            "image_name": "JojosImages333.jpg"
+        },
+        {
+            "char_name": "Ikuro Hashizawa",
+            "image_name": "JojosImages334.jpg"
+        },
+        {
+            "char_name": "Johnny Joestar",
+            "image_name": "JojosImages335.jpg"
+        },
+        {
+            "char_name": "Jonathan Joestar",
+            "image_name": "JojosImages336.jpg"
+        },
+        {
+            "char_name": "Jorge Joestar (Character)",
+            "image_name": "JojosImages337.jpg"
+        },
+        {
+            "char_name": "Jotaro Kujo",
+            "image_name": "JojosImages338.jpg"
+        },
+        {
+            "char_name": "Mao Katahira",
+            "image_name": "JojosImages339.jpg"
+        },
+        {
+            "char_name": "Marco",
+            "image_name": "JojosImages340.jpg"
+        },
+        {
+            "char_name": "Mary Joestar",
+            "image_name": "JojosImages341.jpg"
+        },
+        {
+            "char_name": "Masago Ayashi",
+            "image_name": "JojosImages342.jpg"
+        },
+        {
+            "char_name": "Mika Hayamura",
+            "image_name": "JojosImages343.jpg"
+        },
+        {
+            "char_name": "Anne",
+            "image_name": "JojosImages344.jpg"
+        },
+        {
+            "char_name": "Arnold",
+            "image_name": "JojosImages345.jpg"
+        },
+        {
+            "char_name": "Aya Tsuji",
+            "image_name": "JojosImages346.jpg"
+        },
+        {
+            "char_name": "Ayana Hirose",
+            "image_name": "JojosImages347.jpg"
+        },
+        {
+            "char_name": "Danny",
+            "image_name": "JojosImages348.jpg"
+        },
+        {
+            "char_name": "Dire",
+            "image_name": "JojosImages349.jpg"
+        },
+        {
+            "char_name": "George Joestar I",
+            "image_name": "JojosImages350.jpg"
+        },
+        {
+            "char_name": "Gloria Costello",
+            "image_name": "JojosImages351.jpg"
+        },
+        {
+            "char_name": "Holy Joestar-Kira",
+            "image_name": "JojosImages352.jpg"
+        },
+        {
+            "char_name": "Joseph Joestar (JJL)",
+            "image_name": "JojosImages353.jpg"
+        },
+        {
+            "char_name": "Karera Sakunami",
+            "image_name": "JojosImages354.jpg"
+        },
+        {
+            "char_name": "Koichi Hirose's Mother",
+            "image_name": "JojosImages355.jpg"
+        },
+        {
+            "char_name": "Loggins",
+            "image_name": "JojosImages356.jpg"
+        },
+        {
+            "char_name": "Mal\u00e8na",
+            "image_name": "JojosImages357.jpg"
+        },
+        {
+            "char_name": "Mark",
+            "image_name": "JojosImages358.jpg"
+        },
+        {
+            "char_name": "Messina",
+            "image_name": "JojosImages359.jpg"
+        },
+        {
+            "char_name": "Mikitaka Hazekura",
+            "image_name": "JojosImages360.jpg"
+        },
+        {
+            "char_name": "Pericolo",
+            "image_name": "JojosImages361.jpg"
+        },
+        {
+            "char_name": "Sherry Polnareff",
+            "image_name": "JojosImages362.jpg"
+        },
+        {
+            "char_name": "Smokey Brown",
+            "image_name": "JojosImages363.jpg"
+        },
+        {
+            "char_name": "Allies",
+            "image_name": "JojosImages364.jpg"
+        },
+        {
+            "char_name": "Muhammad Avdol",
+            "image_name": "JojosImages365.jpg"
+        },
+        {
+            "char_name": "Caesar Anthonio Zeppeli",
+            "image_name": "JojosImages366.jpg"
+        },
+        {
+            "char_name": "Jolyne Cujoh",
+            "image_name": "JojosImages367.jpg"
+        },
+        {
+            "char_name": "Erina Pendleton",
+            "image_name": "JojosImages368.jpg"
+        },
+        {
+            "char_name": "George Joestar II",
+            "image_name": "JojosImages369.jpg"
+        },
+        {
+            "char_name": "Giorno Giovanna",
+            "image_name": "JojosImages370.jpg"
+        },
+        {
+            "char_name": "Joseph Joestar",
+            "image_name": "JojosImages371.jpg"
+        },
+        {
+            "char_name": "Holy Kujo",
+            "image_name": "JojosImages372.jpg"
+        },
+        {
+            "char_name": "Lisa Lisa",
+            "image_name": "JojosImages373.jpg"
+        },
+        {
+            "char_name": "Mario Zeppeli",
+            "image_name": "JojosImages374.jpg"
+        },
+        {
+            "char_name": "Roses",
+            "image_name": "JojosImages375.jpg"
+        },
+        {
+            "char_name": "Speedwagon Foundation",
+            "image_name": "JojosImages376.jpg"
+        },
+        {
+            "char_name": "Suzi Q",
+            "image_name": "JojosImages377.jpg"
+        },
+        {
+            "char_name": "Tonio Trussardi",
+            "image_name": "JojosImages378.jpg"
+        },
+        {
+            "char_name": "Tonpetty",
+            "image_name": "JojosImages379.jpg"
+        },
+        {
+            "char_name": "Unnamed Characters",
+            "image_name": "JojosImages380.jpg"
+        },
+        {
+            "char_name": "Wamuu",
+            "image_name": "JojosImages381.jpg"
+        },
+        {
+            "char_name": "A. Phex Brothers",
+            "image_name": "JojosImages382.jpg"
+        },
+        {
+            "char_name": "Absalom",
+            "image_name": "JojosImages383.jpg"
+        },
+        {
+            "char_name": "Adams",
+            "image_name": "JojosImages384.jpg"
+        },
+        {
+            "char_name": "Aisho Dainenjiyama",
+            "image_name": "JojosImages385.jpg"
+        },
+        {
+            "char_name": "Akira Otoishi",
+            "image_name": "JojosImages386.jpg"
+        },
+        {
+            "char_name": "Alessi",
+            "image_name": "JojosImages387.jpg"
+        },
+        {
+            "char_name": "Andre Boom Boom",
+            "image_name": "JojosImages388.jpg"
+        },
+        {
+            "char_name": "Anjuro Katagiri",
+            "image_name": "JojosImages389.jpg"
+        },
+        {
+            "char_name": "Arabia Fats",
+            "image_name": "JojosImages390.jpg"
+        },
+        {
+            "char_name": "Axl RO",
+            "image_name": "JojosImages391.jpg"
+        },
+        {
+            "char_name": "Baby Face",
+            "image_name": "JojosImages392.jpg"
+        },
+        {
+            "char_name": "Wired Beck",
+            "image_name": "JojosImages393.jpg"
+        },
+        {
+            "char_name": "Benjamin Boom Boom",
+            "image_name": "JojosImages394.jpg"
+        },
+        {
+            "char_name": "Blackmore",
+            "image_name": "JojosImages395.jpg"
+        },
+        {
+            "char_name": "Boingo",
+            "image_name": "JojosImages396.jpg"
+        },
+        {
+            "char_name": "Bruford",
+            "image_name": "JojosImages397.jpg"
+        },
+        {
+            "char_name": "Bruno Bucciarati",
+            "image_name": "JojosImages398.jpg"
+        },
+        {
+            "char_name": "Bug-Eaten",
+            "image_name": "JojosImages399.jpg"
+        },
+        {
+            "char_name": "Cameo",
+            "image_name": "JojosImages400.jpg"
+        },
+        {
+            "char_name": "Carne",
+            "image_name": "JojosImages401.jpg"
+        },
+        {
+            "char_name": "Vittorio Cataldi",
+            "image_name": "JojosImages402.jpg"
+        },
+        {
+            "char_name": "Chaka",
+            "image_name": "JojosImages403.jpg"
+        },
+        {
+            "char_name": "Chariot Requiem",
+            "image_name": "JojosImages404.jpg"
+        },
+        {
+            "char_name": "Cheap Trick",
+            "image_name": "JojosImages405.jpg"
+        },
+        {
+            "char_name": "Cioccolata",
+            "image_name": "JojosImages406.jpg"
+        },
+        {
+            "char_name": "D an G",
+            "image_name": "JojosImages407.jpg"
+        },
+        {
+            "char_name": "D-I-S-C-O",
+            "image_name": "JojosImages408.jpg"
+        },
+        {
+            "char_name": "Daiya Higashikata",
+            "image_name": "JojosImages409.jpg"
+        },
+        {
+            "char_name": "Daniel J. D'Arby",
+            "image_name": "JojosImages410.jpg"
+        },
+        {
+            "char_name": "Devo",
+            "image_name": "JojosImages411.jpg"
+        },
+        {
+            "char_name": "Dolomite",
+            "image_name": "JojosImages412.jpg"
+        },
+        {
+            "char_name": "Donatello Versus",
+            "image_name": "JojosImages413.jpg"
+        },
+        {
+            "char_name": "Donovan",
+            "image_name": "JojosImages414.jpg"
+        },
+        {
+            "char_name": "Doobie",
+            "image_name": "JojosImages415.jpg"
+        },
+        {
+            "char_name": "Doremifasolati Do",
+            "image_name": "JojosImages416.jpg"
+        },
+        {
+            "char_name": "Dr. Ferdinand",
+            "image_name": "JojosImages417.jpg"
+        },
+        {
+            "char_name": "Egypt 9 Glory Gods",
+            "image_name": "JojosImages418.jpg"
+        },
+        {
+            "char_name": "Eleven Men",
+            "image_name": "JojosImages419.jpg"
+        },
+        {
+            "char_name": "Foo Fighters",
+            "image_name": "JojosImages420.jpg"
+        },
+        {
+            "char_name": "Foo Fighters (Stand)",
+            "image_name": "JojosImages421.jpg"
+        },
+        {
+            "char_name": "Forever",
+            "image_name": "JojosImages422.jpg"
+        },
+        {
+            "char_name": "Formaggio",
+            "image_name": "JojosImages423.jpg"
+        },
+        {
+            "char_name": "Teruhiko Futaba",
+            "image_name": "JojosImages424.jpg"
+        },
+        {
+            "char_name": "George Joestar I (Steel Ball Run)",
+            "image_name": "JojosImages425.jpg"
+        },
+        {
+            "char_name": "Ghiaccio",
+            "image_name": "JojosImages426.jpg"
+        },
+        {
+            "char_name": "Gray Fly",
+            "image_name": "JojosImages427.jpg"
+        },
+        {
+            "char_name": "Guard Rail",
+            "image_name": "JojosImages428.jpg"
+        },
+        {
+            "char_name": "Guccio",
+            "image_name": "JojosImages429.jpg"
+        },
+        {
+            "char_name": "Gwess",
+            "image_name": "JojosImages430.jpg"
+        },
+        {
+            "char_name": "Hot Pants",
+            "image_name": "JojosImages431.jpg"
+        },
+        {
+            "char_name": "Ikkyu",
+            "image_name": "JojosImages432.jpg"
+        },
+        {
+            "char_name": "Illuso",
+            "image_name": "JojosImages433.jpg"
+        },
+        {
+            "char_name": "Impostor Captain Tennille",
+            "image_name": "JojosImages434.jpg"
+        },
+        {
+            "char_name": "J. Geil",
+            "image_name": "JojosImages435.jpg"
+        },
+        {
+            "char_name": "Jack the Ripper",
+            "image_name": "JojosImages436.jpg"
+        },
+        {
+            "char_name": "Jean Pierre Polnareff",
+            "image_name": "JojosImages437.jpg"
+        },
+        {
+            "char_name": "Johngalli A",
+            "image_name": "JojosImages438.jpg"
+        },
+        {
+            "char_name": "Joshu Higashikata",
+            "image_name": "JojosImages439.jpg"
+        },
+        {
+            "char_name": "Kei Nijimura",
+            "image_name": "JojosImages440.jpg"
+        },
+        {
+            "char_name": "Keicho Nijimura",
+            "image_name": "JojosImages441.jpg"
+        },
+        {
+            "char_name": "Ken Oyanagi",
+            "image_name": "JojosImages442.jpg"
+        },
+        {
+            "char_name": "Kenny G.",
+            "image_name": "JojosImages443.jpg"
+        },
+        {
+            "char_name": "Kenzou",
+            "image_name": "JojosImages444.jpg"
+        },
+        {
+            "char_name": "Khan",
+            "image_name": "JojosImages445.jpg"
+        },
+        {
+            "char_name": "L. A. Boom Boom",
+            "image_name": "JojosImages446.jpg"
+        },
+        {
+            "char_name": "Lang Rangler",
+            "image_name": "JojosImages447.jpg"
+        },
+        {
+            "char_name": "Les Feuilles",
+            "image_name": "JojosImages448.jpg"
+        },
+        {
+            "char_name": "Sogliola Lopez",
+            "image_name": "JojosImages449.jpg"
+        },
+        {
+            "char_name": "Luca",
+            "image_name": "JojosImages450.jpg"
+        },
+        {
+            "char_name": "Magent Magent",
+            "image_name": "JojosImages451.jpg"
+        },
+        {
+            "char_name": "Mannish Boy",
+            "image_name": "JojosImages452.jpg"
+        },
+        {
+            "char_name": "Mariah",
+            "image_name": "JojosImages453.jpg"
+        },
+        {
+            "char_name": "Mario Zucchero",
+            "image_name": "JojosImages454.jpg"
+        },
+        {
+            "char_name": "Melone",
+            "image_name": "JojosImages455.jpg"
+        },
+        {
+            "char_name": "Michal",
+            "image_name": "JojosImages456.jpg"
+        },
+        {
+            "char_name": "Midler",
+            "image_name": "JojosImages457.jpg"
+        },
+        {
+            "char_name": "Mike O.",
+            "image_name": "JojosImages458.jpg"
+        },
+        {
+            "char_name": "Milagro Man",
+            "image_name": "JojosImages459.jpg"
+        },
+        {
+            "char_name": "Mrs. Robinson",
+            "image_name": "JojosImages460.jpg"
+        },
+        {
+            "char_name": "Nena",
+            "image_name": "JojosImages461.jpg"
+        },
+        {
+            "char_name": "Notorious B.I.G",
+            "image_name": "JojosImages462.jpg"
+        },
+        {
+            "char_name": "Old Man Stand User",
+            "image_name": "JojosImages463.jpg"
+        },
+        {
+            "char_name": "Oyecomova",
+            "image_name": "JojosImages464.jpg"
+        },
+        {
+            "char_name": "Polpo",
+            "image_name": "JojosImages465.jpg"
+        },
+        {
+            "char_name": "Rigatoni",
+            "image_name": "JojosImages466.jpg"
+        },
+        {
+            "char_name": "Rikiel",
+            "image_name": "JojosImages467.jpg"
+        },
+        {
+            "char_name": "Risotto Nero",
+            "image_name": "JojosImages468.jpg"
+        },
+        {
+            "char_name": "Robert E. O. Speedwagon",
+            "image_name": "JojosImages469.jpg"
+        },
+        {
+            "char_name": "Rohan Kishibe",
+            "image_name": "JojosImages470.jpg"
+        },
+        {
+            "char_name": "Rubber Soul",
+            "image_name": "JojosImages471.jpg"
+        },
+        {
+            "char_name": "Rudol von Stroheim",
+            "image_name": "JojosImages472.jpg"
+        },
+        {
+            "char_name": "Sale",
+            "image_name": "JojosImages473.jpg"
+        },
+        {
+            "char_name": "Sandman",
+            "image_name": "JojosImages474.jpg"
+        },
+        {
+            "char_name": "Santana",
+            "image_name": "JojosImages475.jpg"
+        },
+        {
+            "char_name": "Scarlet Valentine",
+            "image_name": "JojosImages476.jpg"
+        },
+        {
+            "char_name": "The Scribe Ani",
+            "image_name": "JojosImages477.jpg"
+        },
+        {
+            "char_name": "Secco",
+            "image_name": "JojosImages478.jpg"
+        },
+        {
+            "char_name": "Shigekiyo Yangu",
+            "image_name": "JojosImages479.jpg"
+        },
+        {
+            "char_name": "Sorbet and Gelato",
+            "image_name": "JojosImages480.jpg"
+        },
+        {
+            "char_name": "Sports Maxx",
+            "image_name": "JojosImages481.jpg"
+        },
+        {
+            "char_name": "Squalo and Tiziano",
+            "image_name": "JojosImages482.jpg"
+        },
+        {
+            "char_name": "Stand User (Famicom Jump II)",
+            "image_name": "JojosImages483.jpg"
+        },
+        {
+            "char_name": "Steely Dan",
+            "image_name": "JojosImages484.jpg"
+        },
+        {
+            "char_name": "Straizo",
+            "image_name": "JojosImages485.jpg"
+        },
+        {
+            "char_name": "Sugar Mountain",
+            "image_name": "JojosImages486.jpg"
+        },
+        {
+            "char_name": "Tamami Kobayashi",
+            "image_name": "JojosImages487.jpg"
+        },
+        {
+            "char_name": "Tattoo",
+            "image_name": "JojosImages488.jpg"
+        },
+        {
+            "char_name": "Terence T. D'Arby",
+            "image_name": "JojosImages489.jpg"
+        },
+        {
+            "char_name": "Terunosuke Miyamoto",
+            "image_name": "JojosImages490.jpg"
+        },
+        {
+            "char_name": "The Green Baby",
+            "image_name": "JojosImages491.jpg"
+        },
+        {
+            "char_name": "Thunder McQueen",
+            "image_name": "JojosImages492.jpg"
+        },
+        {
+            "char_name": "Toshikazu Hazamada",
+            "image_name": "JojosImages493.jpg"
+        },
+        {
+            "char_name": "Toyohiro Kanedaichi",
+            "image_name": "JojosImages494.jpg"
+        },
+        {
+            "char_name": "Ungalo",
+            "image_name": "JojosImages495.jpg"
+        },
+        {
+            "char_name": "Urban Guerrilla",
+            "image_name": "JojosImages496.jpg"
+        },
+        {
+            "char_name": "Vanilla Ice",
+            "image_name": "JojosImages497.jpg"
+        },
+        {
+            "char_name": "Viviano Westwood",
+            "image_name": "JojosImages498.jpg"
+        },
+        {
+            "char_name": "Wang Chan",
+            "image_name": "JojosImages499.jpg"
+        },
+        {
+            "char_name": "Wekapipo",
+            "image_name": "JojosImages500.jpg"
+        },
+        {
+            "char_name": "Whitesnake",
+            "image_name": "JojosImages501.jpg"
+        },
+        {
+            "char_name": "Wu Tomoki",
+            "image_name": "JojosImages502.jpg"
+        },
+        {
+            "char_name": "Nizaemon Yamamura",
+            "image_name": "JojosImages503.jpg"
+        },
+        {
+            "char_name": "Yo-Yo Ma",
+            "image_name": "JojosImages504.jpg"
+        },
+        {
+            "char_name": "Yotsuyu Yagiyama",
+            "image_name": "JojosImages505.jpg"
+        },
+        {
+            "char_name": "Yukako Yamagishi",
+            "image_name": "JojosImages506.jpg"
+        },
+        {
+            "char_name": "Yuya Fungami",
+            "image_name": "JojosImages507.jpg"
+        },
+        {
+            "char_name": "ZZ",
+            "image_name": "JojosImages508.jpg"
+        },
+        {
+            "char_name": "Minor Characters",
+            "image_name": "JojosImages509.jpg"
+        },
+        {
+            "char_name": "Miraschon",
+            "image_name": "JojosImages510.jpg"
+        },
+        {
+            "char_name": "Mitsuba Higashikata",
+            "image_name": "JojosImages511.jpg"
+        },
+        {
+            "char_name": "Miuccia Miuller",
+            "image_name": "JojosImages512.jpg"
+        },
+        {
+            "char_name": "Mountain Tim",
+            "image_name": "JojosImages513.jpg"
+        },
+        {
+            "char_name": "Cannolo Murolo",
+            "image_name": "JojosImages514.jpg"
+        },
+        {
+            "char_name": "Mutsukabezaka",
+            "image_name": "JojosImages515.jpg"
+        },
+        {
+            "char_name": "N'Doul",
+            "image_name": "JojosImages516.jpg"
+        },
+        {
+            "char_name": "Nicholas Joestar",
+            "image_name": "JojosImages517.jpg"
+        },
+        {
+            "char_name": "Nijimuras' Father",
+            "image_name": "JojosImages518.jpg"
+        },
+        {
+            "char_name": "Noriaki Kakyoin",
+            "image_name": "JojosImages519.jpg"
+        },
+        {
+            "char_name": "Norisuke Higashikata I",
+            "image_name": "JojosImages520.jpg"
+        },
+        {
+            "char_name": "Norisuke Higashikata IV",
+            "image_name": "JojosImages521.jpg"
+        },
+        {
+            "char_name": "Nukesaku",
+            "image_name": "JojosImages522.jpg"
+        },
+        {
+            "char_name": "Oingo",
+            "image_name": "JojosImages523.jpg"
+        },
+        {
+            "char_name": "Ojiro Sasame",
+            "image_name": "JojosImages524.jpg"
+        },
+        {
+            "char_name": "Okuyasu Nijimura",
+            "image_name": "JojosImages525.jpg"
+        },
+        {
+            "char_name": "Hanae Orikasa",
+            "image_name": "JojosImages526.jpg"
+        },
+        {
+            "char_name": "Trinita Orikasa",
+            "image_name": "JojosImages527.jpg"
+        },
+        {
+            "char_name": "Naoko Osato",
+            "image_name": "JojosImages528.jpg"
+        },
+        {
+            "char_name": "Penelope de la Rosa",
+            "image_name": "JojosImages529.jpg"
+        },
+        {
+            "char_name": "Gianluca Pericolo",
+            "image_name": "JojosImages530.jpg"
+        },
+        {
+            "char_name": "Perla Pucci",
+            "image_name": "JojosImages531.jpg"
+        },
+        {
+            "char_name": "Pesci",
+            "image_name": "JojosImages532.jpg"
+        },
+        {
+            "char_name": "Pet Shop",
+            "image_name": "JojosImages533.jpg"
+        },
+        {
+            "char_name": "Poco",
+            "image_name": "JojosImages534.jpg"
+        },
+        {
+            "char_name": "Poco's Sister",
+            "image_name": "JojosImages535.jpg"
+        },
+        {
+            "char_name": "Pocoloco",
+            "image_name": "JojosImages536.jpg"
+        },
+        {
+            "char_name": "Poor Tom",
+            "image_name": "JojosImages537.jpg"
+        },
+        {
+            "char_name": "Pork Pie Hat Kid",
+            "image_name": "JojosImages538.jpg"
+        },
+        {
+            "char_name": "Prosciutto",
+            "image_name": "JojosImages539.jpg"
+        },
+        {
+            "char_name": "Rai Mamezuku",
+            "image_name": "JojosImages540.jpg"
+        }
+    ]
+}
