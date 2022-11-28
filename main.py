@@ -14,14 +14,16 @@
 # limitations under the License.
 """ Web scrapping tool to scrap any text / image pair from the web"""
 
-from Class.WebSrapping import create_dataset 
-from Class.WebSrapping import save_dataset 
+from scrapper.utils import create_dataset
+from scrapper.utils import save_dataset
 
 import argparse
 
+
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset_path", type=str, help="Path to the final dataset", required=True)
+    parser.add_argument("--dataset_path", type=str,
+                        help="Path to the final dataset", required=False)
     #parser.add_argument("--dataset-image-extension", type=str, help="Extension of image files", required=True)
     #parser.add_argument("--page-link", type=str, help="Page link", required=True)
     #parser.add_argument("--chars-list-link", type=str, help="Page link of the character list", required=True)
@@ -33,15 +35,17 @@ def get_args():
 
     return parser.parse_args()
 
+
 def main():
     args = get_args()
     dataset_path = args.dataset_path
 
-    #save_dataset(True, False)
-    dataSet = create_dataset(True, False)
-    file = open("dataSetJSON.json", "a")
-    file.write(dataSet.to_JSON())
+    save_dataset(True, False)
+    # dataSet = create_dataset(True, False)
+    # file = open("dataSetJSON.json", "a")
+    # file.write(dataSet.to_JSON())
     pass
+
 
 if(__name__ == "__main__"):
     main()
