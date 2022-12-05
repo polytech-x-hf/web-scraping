@@ -38,13 +38,13 @@ def get_args():
 
 def main():
     args = get_args()
-    dataset_path = args.dataset_path
-
-    save_dataset(True, False)
+    tmp = args.dataset_path
+    print(tmp)
+    
+    #save_dataset(True, False)
     # dataSet = create_dataset(True, False)
     # file = open("dataSetJSON.json", "a")
     # file.write(dataSet.to_JSON())
-    pass
 
 
 if(__name__ == "__main__"):
