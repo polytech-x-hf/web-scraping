@@ -2,12 +2,13 @@ import json
 
 class DataSetItem:
     
-    def __init__(self, image_name:str, char_name:str):
-        self.image_name = image_name
+    def __init__(self, file_name:str, char_name:str, caption:str):
+        self.file_name = file_name
         self.char_name = char_name
+        self.caption = caption
 
     def to_string(self):
-        return "{ name : " + self.char_name +  ", image_name : " + self.image_name + " }"
+        return "{ name : " + self.char_name +  ", image_name : " + self.image_name + ", caption : " + self.caption + " }"
 
 class DataSet:
 
@@ -18,10 +19,10 @@ class DataSet:
         self.items.append(item)
 
     def to_string(self):
-        res = ""
+        res = "["
         for i in range(0, len(self.items)):
-            res += self.items[i].to_string() + "\n"
-        return res
+            res += self.items[i].to_string() + ",\n"
+        return res + "]"
 
     def to_JSON(self):
         return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
