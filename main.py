@@ -19,13 +19,30 @@ from scrapper.utils import save_dataset
 
 import argparse
 
+DATASET_PATH = "./Dataset"
+DATASET_IMAGE_EXTENSION = ".jpg"
+
+JOJO_PAGE_LINK = "https://jojo.fandom.com/"
+JOJO_CHARS_LIST_LINK = "https://jojo.fandom.com/wiki/Category:Characters"
+JOJO_CHARACTER_CLASS = "category-page__member-link"
+JOJO_TARGET_CLASS = "image image-thumbnail"
+JOJO_CHAR_NAME_FILENAME = "JojosCharactersNames.txt"
+JOJO_DATASET_PATH = "./Dataset/jojo"
+JOJO_IMAGE_NAME = "JojosImages"
+
+ONEPIECE_PAGE_LINK = ""
+ONEPIECE_CHARS_LIST_LINK = ""
+ONEPIECE_CHARACTER_CLASS = ""
+ONEPIECE_TARGET_CLASS = ""
+ONEPIECE_CHAR_NAME_FILENAME = "OnePieceCharactersNames.txt"
+ONEPIECE_DATASET_PATH = "./Dataset/onepiece"
+ONEPIECE_IMAGE_NAME = "OnepiecesImages"
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset_path", type=str,
-                        help="Path to the final dataset", required=False)
-    #parser.add_argument("--dataset-image-extension", type=str, help="Extension of image files", required=True)
-    #parser.add_argument("--page-link", type=str, help="Page link", required=True)
+    parser.add_argument("--main_page", type=str, help="The web page were the list of characters is", required=False)
+    parser.add_argument("--image_names", type=str, help="the names for the image", required=False)
+    parser.add_argument("--images_html_class", type=str, help="the html class were all the character's images are", required=False)
     #parser.add_argument("--chars-list-link", type=str, help="Page link of the character list", required=True)
     #parser.add_argument("--character-class", type=str, help="Class of the characters", required=True)
     #parser.add_argument("--target-class", type=str, help="Image of the character", required=True)
@@ -38,8 +55,16 @@ def get_args():
 
 def main():
     args = get_args()
-    tmp = args.dataset_path
-    print(tmp)
+    if args.main_page != None :
+        JOJO_CHARS_LIST_LINK = args.main_page
+        if args.image_names != None:
+           JOJO_IMAGE_NAME = args.image_names
+        else:
+            JOJO_IMAGE_NAME = "image"
+        if args.images_html_class != None:
+           JOJO_TARGET_CLASS = args.images_html_class
+        save_dataset(True, False)
+        return
     
     #save_dataset(True, False)
     # dataSet = create_dataset(True, False)
