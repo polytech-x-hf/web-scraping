@@ -4,22 +4,21 @@ from urllib.request import urlretrieve
 import os
 from Class.DataSet import *
 
-DATASET_PATH,DATASET_IMAGE_EXTENSION,JOJO_PAGE_LINK,JOJO_CHARS_LIST_LINK,JOJO_CHARACTER_CLASS = "","","","",""
-JOJO_TARGET_CLASS,JOJO_CHAR_NAME_FILENAME,JOJO_DATASET_PATH,JOJO_IMAGE_NAME,ONEPIECE_PAGE_LINK = "","","","",""
-ONEPIECE_CHARS_LIST_LINK,ONEPIECE_CHARACTER_CLASS,ONEPIECE_TARGET_CLASS,ONEPIECE_CHAR_NAME_FILENAME = "","","",""
-ONEPIECE_DATASET_PATH,ONEPIECE_IMAGE_NAME = "",""
 
-def set_const(dataset_path, image_extension, jojo_page, jojo_chars_link,jojo_char_class, jojo_target_class, jojo_char_name_filename,
-            jojo_dataset_path, jojo_img_name, onep_page_link, onep_chars_link, onep_char_class, onep_target_class, onep_char_name_filename,
-            onep_dataset_path, onep_image_name):
-    global DATASET_PATH,DATASET_IMAGE_EXTENSION,JOJO_PAGE_LINK,JOJO_CHARS_LIST_LINK, JOJO_CHARACTER_CLASS, JOJO_TARGET_CLASS
+def set_const(dataset_path, image_extension, jojo_page, jojo_chars_link, jojo_char_class, jojo_target_class, jojo_char_name_filename,
+              jojo_dataset_path, jojo_img_name, onep_page_link, onep_chars_link, onep_char_class, onep_target_class, onep_char_name_filename,
+              onep_dataset_path, onep_image_name, max_images):
+    global DATASET_PATH, DATASET_IMAGE_EXTENSION, JOJO_PAGE_LINK, JOJO_CHARS_LIST_LINK, JOJO_CHARACTER_CLASS, JOJO_TARGET_CLASS
     global JOJO_CHAR_NAME_FILENAME, JOJO_DATASET_PATH, JOJO_IMAGE_NAME, ONEPIECE_PAGE_LINK, ONEPIECE_CHARS_LIST_LINK
     global ONEPIECE_CHARACTER_CLASS, ONEPIECE_TARGET_CLASS, ONEPIECE_CHAR_NAME_FILENAME, ONEPIECE_DATASET_PATH, ONEPIECE_IMAGE_NAME
-    DATASET_PATH,DATASET_IMAGE_EXTENSION, JOJO_PAGE_LINK, JOJO_CHARS_LIST_LINK = dataset_path, image_extension, jojo_page, jojo_chars_link
+    global MAX_IMAGES
+    DATASET_PATH, DATASET_IMAGE_EXTENSION, JOJO_PAGE_LINK, JOJO_CHARS_LIST_LINK = dataset_path, image_extension, jojo_page, jojo_chars_link
     JOJO_CHARACTER_CLASS, JOJO_TARGET_CLASS, JOJO_CHAR_NAME_FILENAME = jojo_char_class, jojo_target_class, jojo_char_name_filename
-    JOJO_DATASET_PATH,JOJO_IMAGE_NAME,ONEPIECE_PAGE_LINK,ONEPIECE_CHARS_LIST_LINK = jojo_dataset_path, jojo_img_name, onep_page_link, onep_chars_link
-    ONEPIECE_CHARACTER_CLASS,ONEPIECE_TARGET_CLASS,ONEPIECE_CHAR_NAME_FILENAME = onep_char_class, onep_target_class, onep_char_name_filename
-    ONEPIECE_DATASET_PATH,ONEPIECE_IMAGE_NAME = onep_dataset_path, onep_image_name
+    JOJO_DATASET_PATH, JOJO_IMAGE_NAME, ONEPIECE_PAGE_LINK, ONEPIECE_CHARS_LIST_LINK = jojo_dataset_path, jojo_img_name, onep_page_link, onep_chars_link
+    ONEPIECE_CHARACTER_CLASS, ONEPIECE_TARGET_CLASS, ONEPIECE_CHAR_NAME_FILENAME = onep_char_class, onep_target_class, onep_char_name_filename
+    ONEPIECE_DATASET_PATH, ONEPIECE_IMAGE_NAME = onep_dataset_path, onep_image_name
+    MAX_IMAGES = max_images
+
 
 def get_image_from_link(link: str, image_class: str, image_name: str, save_path: str):
     """ 
@@ -69,7 +68,7 @@ def get_characters_links(page_link: str, chars_list_link: str, characters_class:
 
 def save_all_images_and_names_with_link(main_page_link: str, chars_list_link: str, characters_class: str, image_class: str, images_name: str, image_extension: str, file_text_name: str, path: str):
     """ 
-        function that saves all the imagess names and links of the characters 
+        function that saves all the images names and links of the characters 
 
     """
     if(not os.path.exists(path)):
@@ -82,15 +81,20 @@ def save_all_images_and_names_with_link(main_page_link: str, chars_list_link: st
 
     file = open(path + "/" + file_text_name, "a")
 
-    index = 0
-    while len(char_links) > 0:
-        name = chars_name.pop(0)
-        link = char_links.pop(0)
-        if (not name in chars_name) and (not link in char_links):
-            get_image_from_link(link, image_class, images_name +
-                                str(index) + image_extension, path)
-            file.write(name + "\n")
-            index += 1
+    if MAX_IMAGES > 0:
+        for i in range(0, MAX_IMAGES):
+            get_image_from_link(
+                char_links[i], image_class, images_name + str(i) + image_extension, path)
+            file.write(chars_name[i] + "\n")
+    else:
+        while len(char_links) > 0:
+            name = chars_name.pop(0)
+            link = char_links.pop(0)
+            if (not name in chars_name) and (not link in char_links):
+                get_image_from_link(link, image_class, images_name +
+                                    str(index) + image_extension, path)
+                file.write(name + "\n")
+                index += 1
 
     """
     for i in range(0, len(char_links)):
@@ -138,10 +142,10 @@ def create_dataset(jojo_image=True, one_piece_image=True):
     res = DataSet()
     if(jojo_image):
         fill_dataset(JOJO_DATASET_PATH,
-                    JOJO_CHAR_NAME_FILENAME, JOJO_IMAGE_NAME)
+                     JOJO_CHAR_NAME_FILENAME, JOJO_IMAGE_NAME)
 
     if(one_piece_image):
         fill_dataset(ONEPIECE_DATASET_PATH,
-                    ONEPIECE_CHAR_NAME_FILENAME, ONEPIECE_IMAGE_NAME)
+                     ONEPIECE_CHAR_NAME_FILENAME, ONEPIECE_IMAGE_NAME)
 
     return res
