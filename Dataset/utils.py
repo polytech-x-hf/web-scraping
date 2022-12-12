@@ -9,10 +9,7 @@ def export_dataset():
     """
     print("Exporting dataset in progress...")
 
-    jojo_dataset = load_dataset(
-        "imagefolder", data_dir="./assets", split="train")
-
-    print(jojo_dataset[0]["caption"])
+    jojo_dataset = load_dataset("imagefolder", data_dir="assets")
 
     jojo_dataset.push_to_hub(HUB_PATH)
     print("Dataset exported successfuly !")
