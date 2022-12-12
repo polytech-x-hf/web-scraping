@@ -19,6 +19,7 @@ from scrapper.utils import save_dataset
 from scrapper.utils import set_const
 from Dataset.utils import export_dataset
 import os
+import shutil
 
 import argparse
 
@@ -77,6 +78,7 @@ def set_const_to_utils():
 
 def scrapping(args):
     os.system("rm -rf assets/train/jojo")
+    shutil.rmtree('dir_path')
 
     if args.main_page != None:
         global JOJO_CHARS_LIST_LINK, JOJO_IMAGE_NAME, JOJO_TARGET_CLASS, MAX_IMAGES
@@ -99,6 +101,7 @@ def scrapping(args):
         "[", "").replace("},", "}").replace("]", "").replace("\r\n", "\n")
     file = open("assets/train/jojo/metadata.jsonl", "a")
     file.write(dataSet)
+    os.system("rm assets/train/jojo/{JOJO_CHAR_NAME_FILENAME}")
     print("Data scrapped successfuly !")
 
 
