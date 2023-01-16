@@ -77,8 +77,15 @@ def set_const_to_utils():
 
 
 def scrapping(args):
-    os.system("rm -rf assets/train/jojo")
-    shutil.rmtree('dir_path')
+    # os.system("rm -rf assets/train/jojo")
+    # shutil.rmtree('dir_path')
+
+    assetsPath = "assets/train/jojo"
+    if(os.path.exists(assetsPath)):
+        onlyfiles = [f for f in os.listdir(
+            assetsPath) if os.path.isfile(os.path.join(assetsPath, f))]
+
+        print(onlyfiles)
 
     if args.main_page != None:
         global JOJO_CHARS_LIST_LINK, JOJO_IMAGE_NAME, JOJO_TARGET_CLASS, MAX_IMAGES
