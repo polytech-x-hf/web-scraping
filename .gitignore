@@ -1,0 +1,10 @@
+/assets/jojo/train/*
+/assets/onepiece/train/*
+/Dataset/Images/Jojo/*
+/Dataset/Images/OnePiece/*
+tempCodeRunnerFile.py
+__pycache__
+/Class/__pycache__
+/.vscode
+/Class/__pycache__
+/Scrapper/__pycache__
