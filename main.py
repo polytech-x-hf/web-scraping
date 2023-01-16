@@ -12,15 +12,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-""" Web scrapping tool to scrap any text / image pair from the web"""
+""" Web scraping tool to scrap any text / image pair from the web"""
 
-from scrapper.utils import create_dataset
-from scrapper.utils import save_dataset
-from scrapper.utils import set_const
+from scraper.utils import create_dataset
+from scraper.utils import save_dataset
+from scraper.utils import set_const
 from Dataset.utils import export_dataset
 import os
-import shutil
-
+import sys
 import argparse
 
 DATASET_PATH = "./assets"
@@ -50,7 +49,7 @@ SCRIPT_ACTION = ""
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--action", type=str,
-                        help="Script action: either 'scrapping' or 'load_dataset", required=True)
+                        help="Script action: either 'scraping' or 'load_dataset", required=True)
     parser.add_argument("--main_page", type=str,
                         help="The web page were the list of characters is", required=False)
     parser.add_argument("--image_names", type=str,
@@ -58,7 +57,7 @@ def get_args():
     parser.add_argument("--images_html_class", type=str,
                         help="the html class were all the character's images are", required=False)
     parser.add_argument("--max_images", type=int,
-                        help="Max number of images to be scrapped", required=False)
+                        help="Max number of images to be scraped", required=False)
     #parser.add_argument("--chars-list-link", type=str, help="Page link of the character list", required=True)
     #parser.add_argument("--character-class", type=str, help="Class of the characters", required=True)
     #parser.add_argument("--target-class", type=str, help="Image of the character", required=True)
@@ -76,16 +75,59 @@ def set_const_to_utils():
               ONEPIECE_DATASET_PATH, ONEPIECE_IMAGE_NAME, MAX_IMAGES)
 
 
-def scrapping(args):
-    # os.system("rm -rf assets/train/jojo")
-    # shutil.rmtree('dir_path')
+def query_yes_no(question, default="yes"):
+    """Ask a yes/no question via raw_input() and return their answer.
 
+    "question" is a string that is presented to the user.
+    "default" is the presumed answer if the user just hits <Enter>.
+            It must be "yes" (the default), "no" or None (meaning
+            an answer is required of the user).
+
+    The "answer" return value is True for "yes" or False for "no".
+    """
+    valid = {"yes": True, "y": True, "ye": True, "no": False, "n": False}
+    if default is None:
+        prompt = " [y/n] "
+    elif default == "yes":
+        prompt = " [Y/n] "
+    elif default == "no":
+        prompt = " [y/N] "
+    else:
+        raise ValueError("invalid default answer: '%s'" % default)
+
+    while True:
+        sys.stdout.write(question + prompt)
+        choice = input().lower()
+        if default is not None and choice == "":
+            return valid[default]
+        elif choice in valid:
+            return valid[choice]
+        else:
+            sys.stdout.write(
+                "Please respond with 'yes' or 'no' " "(or 'y' or 'n').\n")
+
+
+def removeAssetsFiles():
+    """
+    Getting authorization before removing files for scrapping
+    """
     assetsPath = "assets/train/jojo"
-    if(os.path.exists(assetsPath)):
-        onlyfiles = [f for f in os.listdir(
-            assetsPath) if os.path.isfile(os.path.join(assetsPath, f))]
 
-        print(onlyfiles)
+    if (not query_yes_no("Would you like to delete all your assets files in " + assetsPath + " ?")):
+        print("Scraping has been aborted...")
+        return False
+
+    if(os.path.exists(assetsPath)):
+        for file in os.listdir(assetsPath):
+            os.remove(assetsPath + "/" + file)
+
+    return True
+
+
+def scraping(args):
+
+    if(not removeAssetsFiles()):
+        return
 
     if args.main_page != None:
         global JOJO_CHARS_LIST_LINK, JOJO_IMAGE_NAME, JOJO_TARGET_CLASS, MAX_IMAGES
@@ -101,7 +143,7 @@ def scrapping(args):
     if args.max_images != None:
         MAX_IMAGES = args.max_images
 
-    print("Scrapping in progress...")
+    print("Scraping in progress...")
     set_const_to_utils()
     save_dataset(True, False)
     dataSet = create_dataset(True, False).to_JSON().replace(
@@ -109,13 +151,13 @@ def scrapping(args):
     file = open("assets/train/jojo/metadata.jsonl", "a")
     file.write(dataSet)
     os.system("rm assets/train/jojo/{JOJO_CHAR_NAME_FILENAME}")
-    print("Data scrapped successfuly !")
+    print("Data scraped successfuly !")
 
 
 def main():
     args = get_args()
-    if args.action == "scrapping":
-        scrapping(args)
+    if args.action == "scraping":
+        scraping(args)
     else:
         export_dataset()
 
