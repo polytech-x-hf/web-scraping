@@ -38,7 +38,7 @@ def get_image_from_link(link: str, image_class: str, image_name: str, save_path:
         urlretrieve(img_links[0], save_path + "/" + image_name)
 
 
-def get_characters_links(page_link: str, chars_list_link: str, characters_class: str):
+def get_characters_links(page_link: str, chars_list_link: str, characters_class: str, nb_images_to_scrap = -1):
     """ 
         function that return the name and the link of the characters 
 
@@ -58,16 +58,20 @@ def get_characters_links(page_link: str, chars_list_link: str, characters_class:
                 for i in range(0, len(tmp_names)):
                     chars_links.append(lst_tmp_links[i])
                     chars_names.append(tmp_names[i])
+                    if nb_images_to_scrap >= 0 and len(chars_links) >= nb_images_to_scrap:
+                        break
             elif(len(tmp_names) != len(lst_tmp_links)):
                 raise(ValueError("ERROR : size exceeded"))
         else:
             chars_links.append(page_link + link_suffixe)
             chars_names.append(link.get('title'))
+            if nb_images_to_scrap >= 0 and len(chars_links) >= nb_images_to_scrap:
+                break
 
     return (chars_names, chars_links)
 
 
-def save_all_images_and_names_with_link(main_page_link: str, chars_list_link: str, characters_class: str, image_class: str, images_name: str, image_extension: str, file_text_name: str, path: str):
+def save_all_images_and_names_with_link(main_page_link: str, chars_list_link: str, characters_class: str, image_class: str, images_name: str, image_extension: str, file_text_name: str, path: str, nb_images_to_scrap = -1):
     """ 
         function that saves all the imagess names and links of the characters 
 
@@ -75,10 +79,13 @@ def save_all_images_and_names_with_link(main_page_link: str, chars_list_link: st
     if(not os.path.exists(path)):
         os.mkdir(path)
     (chars_name, char_links) = get_characters_links(
-        main_page_link, chars_list_link, characters_class)
+        main_page_link, chars_list_link, characters_class, nb_images_to_scrap)
     if(len(char_links) != len(chars_name)):
         raise ValueError(
             "ERROR : chars_list_link and charsName doesn't have the same len")
+
+    if nb_images_to_scrap >= 0 and len(char_links) > nb_images_to_scrap:
+        char_links = char_links[0:nb_images_to_scrap]
 
     file = open(path + "/" + file_text_name, "a")
 
@@ -118,6 +125,24 @@ def save_dataset(jojos_data=True, onepieces_data=True):
     if(onepieces_data):
         save_all_images_and_names_with_link(ONEPIECE_PAGE_LINK, ONEPIECE_CHARS_LIST_LINK, ONEPIECE_CHARACTER_CLASS, ONEPIECE_TARGET_CLASS,
                                             ONEPIECE_IMAGE_NAME, DATASET_IMAGE_EXTENSION, ONEPIECE_CHAR_NAME_FILENAME, ONEPIECE_DATASET_PATH)
+
+def save_dataset(nb_jojo_images: int, nb_onepiece_images : int):
+    if(nb_jojo_images <= 0 and nb_onepiece_images <= 0):
+        return
+        
+    if(not os.path.exists(DATASET_PATH)):
+        os.mkdir(DATASET_PATH)
+    if(nb_jojo_images > 0 and not os.path.exists(JOJO_DATASET_PATH)):
+        os.mkdir(JOJO_DATASET_PATH)
+    if(nb_onepiece_images > 0 and not os.path.exists(ONEPIECE_DATASET_PATH)):
+        os.mkdir(ONEPIECE_DATASET_PATH)
+
+    if nb_jojo_images > 0:
+        save_all_images_and_names_with_link(JOJO_PAGE_LINK, JOJO_CHARS_LIST_LINK, JOJO_CHARACTER_CLASS,
+                                            JOJO_TARGET_CLASS, JOJO_IMAGE_NAME, DATASET_IMAGE_EXTENSION, JOJO_CHAR_NAME_FILENAME, JOJO_DATASET_PATH, nb_jojo_images)
+    if nb_onepiece_images > 0:
+        save_all_images_and_names_with_link(ONEPIECE_PAGE_LINK, ONEPIECE_CHARS_LIST_LINK, ONEPIECE_CHARACTER_CLASS, ONEPIECE_TARGET_CLASS,
+                                            ONEPIECE_IMAGE_NAME, DATASET_IMAGE_EXTENSION, ONEPIECE_CHAR_NAME_FILENAME, ONEPIECE_DATASET_PATH, nb_onepiece_images)
 
 
 def create_dataset(jojo_image=True, one_piece_image=True):

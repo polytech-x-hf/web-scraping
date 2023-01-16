@@ -28,7 +28,7 @@ JOJO_CHARS_LIST_LINK = "https://jojo.fandom.com/wiki/Category:Characters"
 JOJO_CHARACTER_CLASS = "category-page__member-link"
 JOJO_TARGET_CLASS = "image image-thumbnail"
 JOJO_CHAR_NAME_FILENAME = "JojosCharactersNames.txt"
-JOJO_DATASET_PATH = "./assets/jojo/train"
+JOJO_DATASET_PATH = "./Dataset/Images/Jojo"
 JOJO_IMAGE_NAME = "JojosImages"
 
 ONEPIECE_PAGE_LINK = ""
@@ -36,7 +36,7 @@ ONEPIECE_CHARS_LIST_LINK = ""
 ONEPIECE_CHARACTER_CLASS = ""
 ONEPIECE_TARGET_CLASS = ""
 ONEPIECE_CHAR_NAME_FILENAME = "OnePieceCharactersNames.txt"
-ONEPIECE_DATASET_PATH = "./assets/onepiece/train"
+ONEPIECE_DATASET_PATH = "./Dataset/Images/OnePiece"
 ONEPIECE_IMAGE_NAME = "OnepiecesImages"
 
 def get_args():
@@ -76,7 +76,7 @@ def main():
         return
     
     set_const_to_utils()
-    save_dataset(True, False)
+    save_dataset(10, -1)
     dataSet = create_dataset(True, False)
     file = open("dataSetJSON.jsonl", "a")
     file.write(dataSet.to_JSON())
