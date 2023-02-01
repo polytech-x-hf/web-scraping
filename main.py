@@ -45,7 +45,6 @@ MAX_IMAGES = -1
 
 SCRIPT_ACTION = ""
 
-
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--action", type=str,

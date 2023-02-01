@@ -2,7 +2,6 @@ from datasets import load_dataset
 
 HUB_PATH = "polytechXhf/jojos-dataset"
 
-
 def export_dataset():
     """
         Create a Dataset from scrapped datas and push it on the hf-hub

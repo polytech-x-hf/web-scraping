@@ -77,23 +77,21 @@ def save_all_images_and_names_with_link(main_page_link: str, chars_list_link: st
     (chars_name, char_links) = get_characters_links(
         main_page_link, chars_list_link, characters_class)
     if(len(char_links) != len(chars_name)):
-        raise ValueError(
-            "ERROR : chars_list_link and charsName doesn't have the same len")
+        raise ValueError("ERROR : chars_list_link and charsName doesn't have the same len")
 
     file = open(path + "/" + file_text_name, "a")
 
     if MAX_IMAGES > 0:
         for i in range(0, MAX_IMAGES):
-            get_image_from_link(
-                char_links[i], image_class, images_name + str(i) + image_extension, path)
+            get_image_from_link(char_links[i], image_class, images_name + str(i) + image_extension, path)
             file.write(chars_name[i] + "\n")
     else:
+        index = 0
         while len(char_links) > 0:
             name = chars_name.pop(0)
             link = char_links.pop(0)
             if (not name in chars_name) and (not link in char_links):
-                get_image_from_link(link, image_class, images_name +
-                                    str(index) + image_extension, path)
+                get_image_from_link(link, image_class, images_name + str(index) + image_extension, path)
                 file.write(name + "\n")
                 index += 1
 
