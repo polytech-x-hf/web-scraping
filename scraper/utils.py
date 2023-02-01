@@ -40,7 +40,6 @@ def get_image_from_link(link: str, image_class: str, image_name: str, save_path:
 def get_characters_links(page_link: str, chars_list_link: str, characters_class: str):
     """ 
         function that return the name and the link of the characters 
-
     """
     chars_names = []
     chars_links = []
@@ -58,11 +57,15 @@ def get_characters_links(page_link: str, chars_list_link: str, characters_class:
                 for i in range(0, len(tmp_names)):
                     chars_links.append(lst_tmp_links[i])
                     chars_names.append(tmp_names[i])
+                    if MAX_IMAGES > 0 and len(chars_links) >= MAX_IMAGES:
+                        break
             elif(len(tmp_names) != len(lst_tmp_links)):
                 raise(ValueError("ERROR : size exceeded"))
         else:
             chars_links.append(page_link + link_suffixe)
             chars_names.append(link.get('title'))
+        if MAX_IMAGES > 0 and len(chars_links) >= MAX_IMAGES:
+            break
 
     return (chars_names, chars_links)
 
