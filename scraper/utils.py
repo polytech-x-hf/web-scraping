@@ -48,6 +48,7 @@ def get_characters_links(page_link: str, chars_list_link: str, characters_class:
     html_doc = tmp.text
     soup = BeautifulSoup(html_doc, 'html.parser')
     links = soup.find_all('a', class_=characters_class)
+    # TODO: if(MAX_IMAGES > 0) make for i in range(1,MAX_IMAGES)
     for link in links:
         link_suffixe = link.get('href')
         if ("Category:" in link_suffixe):
