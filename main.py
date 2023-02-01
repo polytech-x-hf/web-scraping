@@ -144,7 +144,7 @@ def scraping(args):
 
     print("Scraping in progress...")
     set_const_to_utils()
-    save_dataset(True, False)
+    save_dataset(True, True)
     dataSet = create_dataset(True, False).to_JSON().replace(
         "[", "").replace("},", "}").replace("]", "").replace("\r\n", "\n")
     file = open("assets/train/jojo/metadata.jsonl", "a")

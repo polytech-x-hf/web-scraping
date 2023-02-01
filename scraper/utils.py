@@ -47,12 +47,10 @@ def get_characters_links(page_link: str, chars_list_link: str, characters_class:
     html_doc = tmp.text
     soup = BeautifulSoup(html_doc, 'html.parser')
     links = soup.find_all('a', class_=characters_class)
-    # TODO: if(MAX_IMAGES > 0) make for i in range(1,MAX_IMAGES)
     for link in links:
         link_suffixe = link.get('href')
         if ("Category:" in link_suffixe):
-            (tmp_names, lst_tmp_links) = get_characters_links(
-                page_link, page_link + link_suffixe, characters_class)
+            (tmp_names, lst_tmp_links) = get_characters_links(page_link, page_link + link_suffixe, characters_class)
             if(len(tmp_names) == len(lst_tmp_links) and len(tmp_names) != 0):
                 for i in range(0, len(tmp_names)):
                     chars_links.append(lst_tmp_links[i])
@@ -69,34 +67,60 @@ def get_characters_links(page_link: str, chars_list_link: str, characters_class:
 
     return (chars_names, chars_links)
 
+def get_one_piece_link():
 
-def save_all_images_and_names_with_link(main_page_link: str, chars_list_link: str, characters_class: str, image_class: str, images_name: str, image_extension: str, file_text_name: str, path: str):
+    return ([], [])
+    #encore des bug a fix...
+    one_piece_chars_link = "https://onepiece.fandom.com/wiki/List_of_Canon_Characters"
+    char_table_class = "wikitable sortable jquery-tablesorter"
+
+    tmp = requests.get(one_piece_chars_link)
+    html_doc = tmp.text
+    soup = BeautifulSoup(html_doc, 'html.parser')
+
+    chars_names = []
+    chars_links = []
+
+    #get the tree tables where the characters link page and names are.
+    tables = soup.find_all('table', class_="wikitable sortable", recursive=True)
+    for table in tables:
+        #foreach table, we get the <tr> html tag that represent a row of the table
+        trs = table.find_all('tr')
+        #foreach tr tag, we get the 2nd <td> tag where the name and the link of the character is.
+        for tr in trs:
+            td = tr.find_all('a', recursive=True)
+            chars_names.append(td.get('title'))
+            chars_links.append(td.get('href'))
+
+    return (chars_names, chars_links)
+
+
+def save_all_images_and_names_with_link(main_page_link: str, chars_list_link: str, characters_class: str, image_class: str, images_name: str, image_extension: str, file_text_name: str, path: str, isOnePieceScrapping:bool = False):
     """ 
         function that saves all the images names and links of the characters 
-
     """
     if(not os.path.exists(path)):
         os.mkdir(path)
-    (chars_name, char_links) = get_characters_links(
-        main_page_link, chars_list_link, characters_class)
+
+    chars_name, char_links = 0,0
+    if isOnePieceScrapping:
+        (chars_name, char_links) = get_one_piece_link()
+    else:
+        (chars_name, char_links) = get_characters_links(main_page_link, chars_list_link, characters_class)
+     
     if(len(char_links) != len(chars_name)):
         raise ValueError("ERROR : chars_list_link and charsName doesn't have the same len")
 
     file = open(path + "/" + file_text_name, "a")
 
-    if MAX_IMAGES > 0:
-        for i in range(0, MAX_IMAGES):
-            get_image_from_link(char_links[i], image_class, images_name + str(i) + image_extension, path)
-            file.write(chars_name[i] + "\n")
-    else:
-        index = 0
-        while len(char_links) > 0:
-            name = chars_name.pop(0)
-            link = char_links.pop(0)
-            if (not name in chars_name) and (not link in char_links):
-                get_image_from_link(link, image_class, images_name + str(index) + image_extension, path)
-                file.write(name + "\n")
-                index += 1
+    index = 0
+    while len(char_links) > 0:
+        name = chars_name.pop(0)
+        link = char_links.pop(0)
+        if (not name in chars_name) and (not link in char_links):
+            get_image_from_link(link, image_class, images_name + str(index) + image_extension, path)
+            file.write(name + "\n")
+            index += 1
 
     """
     for i in range(0, len(char_links)):
@@ -123,7 +147,7 @@ def save_dataset(jojos_data=True, onepieces_data=True):
 
     if(onepieces_data):
         save_all_images_and_names_with_link(ONEPIECE_PAGE_LINK, ONEPIECE_CHARS_LIST_LINK, ONEPIECE_CHARACTER_CLASS, ONEPIECE_TARGET_CLASS,
-                                            ONEPIECE_IMAGE_NAME, DATASET_IMAGE_EXTENSION, ONEPIECE_CHAR_NAME_FILENAME, ONEPIECE_DATASET_PATH)
+                                            ONEPIECE_IMAGE_NAME, DATASET_IMAGE_EXTENSION, ONEPIECE_CHAR_NAME_FILENAME, ONEPIECE_DATASET_PATH, True)
 
 
 def create_dataset(jojo_image=True, one_piece_image=True):
@@ -137,8 +161,7 @@ def create_dataset(jojo_image=True, one_piece_image=True):
         for line in file:
             char_names.append(line)
         for i in range(0, len(char_names)):
-            item = DataSetItem(
-                image_name + str(i) + DATASET_IMAGE_EXTENSION, char_names[i].replace('\n', ''), "no caption")
+            item = DataSetItem(image_name + str(i) + DATASET_IMAGE_EXTENSION, char_names[i].replace('\n', ''), "no caption")
             res.add_item(item)
 
     res = DataSet()
