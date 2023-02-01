@@ -3,6 +3,7 @@ import requests
 from urllib.request import urlretrieve
 import os
 from Class.DataSet import *
+from Dataset.utils import *
 
 
 def set_const(dataset_path, image_extension, jojo_page, jojo_chars_link, jojo_char_class, jojo_target_class, jojo_char_name_filename,
@@ -50,7 +51,8 @@ def get_characters_links(page_link: str, chars_list_link: str, characters_class:
     for link in links:
         link_suffixe = link.get('href')
         if ("Category:" in link_suffixe):
-            (tmp_names, lst_tmp_links) = get_characters_links(page_link, page_link + link_suffixe, characters_class)
+            (tmp_names, lst_tmp_links) = get_characters_links(
+                page_link, page_link + link_suffixe, characters_class)
             if(len(tmp_names) == len(lst_tmp_links) and len(tmp_names) != 0):
                 for i in range(0, len(tmp_names)):
                     chars_links.append(lst_tmp_links[i])
@@ -67,10 +69,11 @@ def get_characters_links(page_link: str, chars_list_link: str, characters_class:
 
     return (chars_names, chars_links)
 
+
 def get_one_piece_link():
 
     return ([], [])
-    #encore des bug a fix...
+    # encore des bug a fix...
     one_piece_chars_link = "https://onepiece.fandom.com/wiki/List_of_Canon_Characters"
     char_table_class = "wikitable sortable jquery-tablesorter"
 
@@ -81,12 +84,13 @@ def get_one_piece_link():
     chars_names = []
     chars_links = []
 
-    #get the tree tables where the characters link page and names are.
-    tables = soup.find_all('table', class_="wikitable sortable", recursive=True)
+    # get the tree tables where the characters link page and names are.
+    tables = soup.find_all(
+        'table', class_="wikitable sortable", recursive=True)
     for table in tables:
-        #foreach table, we get the <tr> html tag that represent a row of the table
+        # foreach table, we get the <tr> html tag that represent a row of the table
         trs = table.find_all('tr')
-        #foreach tr tag, we get the 2nd <td> tag where the name and the link of the character is.
+        # foreach tr tag, we get the 2nd <td> tag where the name and the link of the character is.
         for tr in trs:
             td = tr.find_all('a', recursive=True)
             chars_names.append(td.get('title'))
@@ -95,21 +99,23 @@ def get_one_piece_link():
     return (chars_names, chars_links)
 
 
-def save_all_images_and_names_with_link(main_page_link: str, chars_list_link: str, characters_class: str, image_class: str, images_name: str, image_extension: str, file_text_name: str, path: str, isOnePieceScrapping:bool = False):
+def save_all_images_and_names_with_link(main_page_link: str, chars_list_link: str, characters_class: str, image_class: str, images_name: str, image_extension: str, file_text_name: str, path: str, isOnePieceScrapping: bool = False):
     """ 
         function that saves all the images names and links of the characters 
     """
     if(not os.path.exists(path)):
         os.mkdir(path)
 
-    chars_name, char_links = 0,0
+    chars_name, char_links = 0, 0
     if isOnePieceScrapping:
         (chars_name, char_links) = get_one_piece_link()
     else:
-        (chars_name, char_links) = get_characters_links(main_page_link, chars_list_link, characters_class)
-     
+        (chars_name, char_links) = get_characters_links(
+            main_page_link, chars_list_link, characters_class)
+
     if(len(char_links) != len(chars_name)):
-        raise ValueError("ERROR : chars_list_link and charsName doesn't have the same len")
+        raise ValueError(
+            "ERROR : chars_list_link and charsName doesn't have the same len")
 
     file = open(path + "/" + file_text_name, "a")
 
@@ -118,7 +124,8 @@ def save_all_images_and_names_with_link(main_page_link: str, chars_list_link: st
         name = chars_name.pop(0)
         link = char_links.pop(0)
         if (not name in chars_name) and (not link in char_links):
-            get_image_from_link(link, image_class, images_name + str(index) + image_extension, path)
+            get_image_from_link(link, image_class, images_name +
+                                str(index) + image_extension, path)
             file.write(name + "\n")
             index += 1
 
@@ -158,10 +165,14 @@ def create_dataset(jojo_image=True, one_piece_image=True):
     def fill_dataset(data_path, char_name_path, image_name):
         char_names = []
         file = open(data_path + "/" + char_name_path)
+
         for line in file:
             char_names.append(line)
+
         for i in range(0, len(char_names)):
-            item = DataSetItem(image_name + str(i) + DATASET_IMAGE_EXTENSION, char_names[i].replace('\n', ''), "no caption")
+            file_name = image_name + str(i) + DATASET_IMAGE_EXTENSION
+            item = DataSetItem(file_name, char_names[i].replace(
+                '\n', ''), caption_dataset(data_path + "/" + file_name))
             res.add_item(item)
 
     res = DataSet()

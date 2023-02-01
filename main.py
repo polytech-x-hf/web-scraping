@@ -21,6 +21,7 @@ from Dataset.utils import export_dataset
 import os
 import sys
 import argparse
+import time
 
 DATASET_PATH = "./assets"
 DATASET_IMAGE_EXTENSION = ".jpg"
@@ -44,6 +45,7 @@ ONEPIECE_IMAGE_NAME = "OnepiecesImages"
 MAX_IMAGES = -1
 
 SCRIPT_ACTION = ""
+
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -143,14 +145,19 @@ def scraping(args):
         MAX_IMAGES = args.max_images
 
     print("Scraping in progress...")
+
+    # Measuring scraping time
+    start_time = time.time()
+
     set_const_to_utils()
     save_dataset(True, True)
     dataSet = create_dataset(True, False).to_JSON().replace(
         "[", "").replace("},", "}").replace("]", "").replace("\r\n", "\n")
     file = open("assets/train/jojo/metadata.jsonl", "a")
     file.write(dataSet)
-    os.system("rm assets/train/jojo/{JOJO_CHAR_NAME_FILENAME}")
-    print("Data scraped successfuly !")
+    os.system("rm assets/train/jojo/" + JOJO_CHAR_NAME_FILENAME)
+    print("Data scraped successfuly in %.5s seconds!" %
+          (time.time() - start_time))
 
 
 def main():
