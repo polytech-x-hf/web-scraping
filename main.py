@@ -18,6 +18,7 @@ from scraper.utils import create_dataset
 from scraper.utils import save_dataset
 from scraper.utils import set_const
 from Dataset.utils import export_dataset
+from tests.test_dataset import *
 import os
 import sys
 import argparse
@@ -165,6 +166,7 @@ def main():
     if args.action == "scraping":
         scraping(args)
     else:
+        # unittest.main()
         export_dataset()
 
 
