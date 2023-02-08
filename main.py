@@ -23,6 +23,7 @@ import os
 import sys
 import argparse
 import time
+from tests.test_scrapper import test_web_scraping
 
 DATASET_PATH = "./assets"
 DATASET_IMAGE_EXTENSION = ".jpg"
@@ -162,6 +163,7 @@ def scraping(args):
 
 
 def main():
+
     args = get_args()
     if args.action == "scraping":
         scraping(args)

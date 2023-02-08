@@ -24,12 +24,10 @@ def set_const(dataset_path, image_extension, jojo_page, jojo_chars_link, jojo_ch
 def get_image_from_link(link: str, image_class: str, image_name: str, save_path: str):
     """ 
         function to get an image from a link 
-
     """
     tmp = requests.get(link)
     html_doc = tmp.text
     soup = BeautifulSoup(html_doc, 'html.parser')
-    # a = soup.find_all('a', id = targetedID)
     links = soup.find_all('a', class_=image_class, limit=1)
     img_links = []
     for link in links:
@@ -44,10 +42,22 @@ def get_characters_links(page_link: str, chars_list_link: str, characters_class:
     """
     chars_names = []
     chars_links = []
-    tmp = requests.get(chars_list_link)
+
+    tmp = None
+    try:
+        tmp = requests.get(chars_list_link)
+    except:
+        raise(ValueError("The link : " + chars_list_link +
+              " is an incorrent website link"))
+
     html_doc = tmp.text
     soup = BeautifulSoup(html_doc, 'html.parser')
     links = soup.find_all('a', class_=characters_class)
+
+    if(len(links) <= 0):
+        raise(ValueError("No tag with the class : " + characters_class +
+              " was found in the link : " + chars_list_link))
+
     for link in links:
         link_suffixe = link.get('href')
         if ("Category:" in link_suffixe):
@@ -92,9 +102,9 @@ def get_one_piece_link():
         trs = table.find_all('tr')
         # foreach tr tag, we get the 2nd <td> tag where the name and the link of the character is.
         for tr in trs:
-            td = tr.find_all('a', recursive=True)
-            chars_names.append(td.get('title'))
-            chars_links.append(td.get('href'))
+            tds = tr.find_all('a', recursive=False)
+            chars_names.append(tds[1].get('title'))
+            chars_links.append(tds[1].get('href'))
 
     return (chars_names, chars_links)
 

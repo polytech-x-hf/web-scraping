@@ -1,6 +1,5 @@
 import json
 
-
 class DataSetItem:
 
     def __init__(self, file_name: str, char_name: str, caption: str):
