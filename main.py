@@ -157,13 +157,15 @@ def scraping(args):
         "[", "").replace("},", "}").replace("]", "").replace("\r\n", "\n")
     file = open("assets/train/jojo/metadata.jsonl", "a")
     file.write(dataSet)
-    os.system("rm assets/train/jojo/" + JOJO_CHAR_NAME_FILENAME)
+
+    if(os.path.exists("assets/train/jojo/" + JOJO_CHAR_NAME_FILENAME)):
+        os.remove("assets/train/jojo/" + JOJO_CHAR_NAME_FILENAME)
+
     print("Data scraped successfuly in %.5s seconds!" %
           (time.time() - start_time))
 
 
 def main():
-
     args = get_args()
     if args.action == "scraping":
         scraping(args)
