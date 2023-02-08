@@ -155,10 +155,7 @@ def scraping(args):
 
 
 def main():
-
-    test_web_scraping()
-    return
-
+    
     args = get_args()
     if args.action == "scraping":
         scraping(args)
