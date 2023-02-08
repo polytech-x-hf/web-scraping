@@ -21,6 +21,7 @@ from Dataset.utils import export_dataset
 import os
 import sys
 import argparse
+from tests.test_scrapper import test_web_scraping
 
 DATASET_PATH = "./assets"
 DATASET_IMAGE_EXTENSION = ".jpg"
@@ -154,6 +155,9 @@ def scraping(args):
 
 
 def main():
+
+    test_web_scraping()
+    return
 
     args = get_args()
     if args.action == "scraping":
