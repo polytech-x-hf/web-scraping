@@ -69,7 +69,7 @@ def get_characters_links(page_link: str, chars_list_link: str, characters_class:
 
 def get_one_piece_link():
 
-    return ([], [])
+    #return ([], [])
     #encore des bug a fix...
     one_piece_chars_link = "https://onepiece.fandom.com/wiki/List_of_Canon_Characters"
     char_table_class = "wikitable sortable jquery-tablesorter"
@@ -83,14 +83,19 @@ def get_one_piece_link():
 
     #get the tree tables where the characters link page and names are.
     tables = soup.find_all('table', class_="wikitable sortable", recursive=True)
+    tables = soup.find_all('table', class_="wikitable sortable jquery-tablesorter", recursive=True)
+    tables = soup.find_all('table', recursive=True)
+    length = len(tables)
+    print(length)
     for table in tables:
-        #foreach table, we get the <tr> html tag that represent a row of the table
-        trs = table.find_all('tr')
+        #foreach table, we get the <tr> html tag that represent a row of the table, the <tr> components is in a <tbody> tag
+        tbody = table.find('tbody', recursive=False)
+        trs = tbody.find_all('tr')
         #foreach tr tag, we get the 2nd <td> tag where the name and the link of the character is.
         for tr in trs:
-            td = tr.find_all('a', recursive=True)
-            chars_names.append(td.get('title'))
-            chars_links.append(td.get('href'))
+            tds = tr.find_all('a', recursive=False)
+            chars_names.append(tds[1].get('title'))
+            chars_links.append(tds[1].get('href'))
 
     return (chars_names, chars_links)
 

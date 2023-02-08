@@ -154,6 +154,7 @@ def scraping(args):
 
 
 def main():
+
     args = get_args()
     if args.action == "scraping":
         scraping(args)
