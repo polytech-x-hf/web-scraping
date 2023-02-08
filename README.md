@@ -15,9 +15,14 @@ To run locally do the following:
 git clone https://github.com/polytech-x-hf/web-scraping
 python main.py [arguments]
 ```
-Arguments : action (ex : scraping), main_page (ex : https://www.fandom.com), image_names (ex : my_image_name), images_html_class (name of the html class where the link of the image is stocked, example for Jojo's scraping : image image-thumbnail), max_images (number maximal of images wanted, ex : 10)
+Arguments : action (ex : scraping), main_page (ex : https://jojo.fandom.com/), image_names (ex : my_image_name), images_html_class (name of the html class where the link of the image is stocked, example for Jojo's scraping : image image-thumbnail), max_images (number maximal of images wanted, ex : 10 or -1 for all possible images)
 
-### Liens
+For instance : 
+```
+python main.py --action "scraping" --main_page "https://jojo.fandom.com/" --image_names "my_image_name" --images_html_class "image image-thumbnail" --max_images 5 
+```
+
+### Links
 
 <a href="https://https://www.fandom.com//" target="_blank">Fandom.com</a>
 
