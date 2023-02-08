@@ -27,4 +27,3 @@ python main.py --action "scraping" --main_page "https://jojo.fandom.com/" --imag
 <a href="https://https://www.fandom.com//" target="_blank">Fandom.com</a>
 
 <a href="https://beautiful-soup-4.readthedocs.io/en/latest//" target="_blank">Beatiful Soup documentation</a>
-
