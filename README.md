@@ -27,3 +27,34 @@ python main.py --action "scraping" --main_page "https://jojo.fandom.com/" --imag
 <a href="https://https://www.fandom.com//" target="_blank">Fandom.com</a>
 
 <a href="https://beautiful-soup-4.readthedocs.io/en/latest//" target="_blank">Beatiful Soup documentation</a>
+
+# Dataset script 
+
+The purpose of this script is to fill the dataset, created by the scraper, with a caption and export it to the hub.
+
+Installation required :  
+```
+pip install datasets
+pip install PIL
+pip install transformers
+```
+
+
+To run locally do the following:
+
+```
+git clone https://github.com/polytech-x-hf/web-scraping
+python main.py --action "load_dataset"
+```
+
+### Links
+
+<a href="https://huggingface.co/docs/datasets/index" target="_blank">Datasets documentation</a>
+
+<a href="https://he-arc.github.io/livre-python/pillow/index.html" target="_blank">PIL documentation</a>
+
+<a href="https://huggingface.co/docs/transformers/model_doc/blip" target="_blank">Blip documentation</a>
+
+<a href="https://huggingface.co/docs/transformers/model_doc/auto" target="_blank">Autoclasses documentation</a>
+
+<a href="https://huggingface.co/docs/transformers/index" target="_blank">Transformers documentation</a>
