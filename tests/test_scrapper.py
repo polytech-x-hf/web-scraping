@@ -1,13 +1,14 @@
+from scraper.utils import *
 from bs4 import BeautifulSoup
 import requests
 import unittest
-from scraper.utils import *
 import pytest
 import os
 
 class ScrapperTest(unittest.TestCase):
     """ Test functions in web scrapping script """
     
+    @staticmethod
     def test_get_characters_links():
 
         errors = []
@@ -32,6 +33,7 @@ class ScrapperTest(unittest.TestCase):
 
         assert len(errors) <= 0, "errors occured:\n".format("\n".join(errors))
 
+    @staticmethod
     def test_get_image_from_link():
 
         errors = []
@@ -57,13 +59,14 @@ class ScrapperTest(unittest.TestCase):
 
         assert len(errors) <= 0, "errors occured:\n".format("\n".join(errors))
 
-    """def test_web_scraping():
+    @staticmethod
+    def test_web_scraping():
         set_const("./assets", ".jpg", "https://jojo.fandom.com/", "https://jojo.fandom.com/wiki/Category:Characters", "category-page__member-link", "image image-thumbnail", "JojosCharactersNames.txt",
                 "./assets/train/jojo", "JojosImages", "", "", "", "", "", "", "", 5)
 
-        test_get_characters_links()
-        test_get_image_from_link()
-    """
+        ScrapperTest.test_get_characters_links()
+        ScrapperTest.test_get_image_from_link()
+    
 
-def main():
-    unittest.main()
+#def main():
+#   unittest.main()
