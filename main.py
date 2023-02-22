@@ -52,7 +52,9 @@ SCRIPT_ACTION = ""
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--action", type=str,
-                        help="Script action: either 'scraping' or 'load_dataset", required=True)
+                        help="Script action: either 'scraping' or 'load_dataset'" , required=True)
+    parser.add_argument("--get_tests", type=int,
+                        help="Test the scraper (0 or 1)", required=True)
     parser.add_argument("--main_page", type=str,
                         help="The web page were the list of characters is", required=False)
     parser.add_argument("--image_names", type=str,
@@ -61,6 +63,7 @@ def get_args():
                         help="the html class were all the character's images are", required=False)
     parser.add_argument("--max_images", type=int,
                         help="Max number of images to be scraped", required=False)
+    
     #parser.add_argument("--chars-list-link", type=str, help="Page link of the character list", required=True)
     #parser.add_argument("--character-class", type=str, help="Class of the characters", required=True)
     #parser.add_argument("--target-class", type=str, help="Image of the character", required=True)
@@ -167,16 +170,15 @@ def scraping(args):
 
 def main():
 
-    ScrapperTest.test_web_scraping()
-    return
-
     args = get_args()
     if args.action == "scraping":
         scraping(args)
-    else:
-        # unittest.main()
+        if args.get_tests == 1:
+            ScrapperTest.test_web_scraping()
+    else :
         export_dataset()
-
+        
+        # unittest.main()
 
 if(__name__ == "__main__"):
     main()
