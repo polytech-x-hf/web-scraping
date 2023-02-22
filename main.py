@@ -24,6 +24,8 @@ import sys
 import argparse
 import time
 from tests.test_scrapper import *
+from scraper.script_onepiece import run_scraping as onepiece_scraping
+from slugify import slugify
 
 DATASET_PATH = "./assets"
 DATASET_IMAGE_EXTENSION = ".jpg"
@@ -52,7 +54,9 @@ SCRIPT_ACTION = ""
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--action", type=str,
-                        help="Script action: either 'scraping' or 'load_dataset'" , required=True)
+                        help="Script action: either 'scraping' or 'load_dataset'", required=True)
+    parser.add_argument("--manga_scraped", type=str,
+                        help="Scrap either 'jojo' or 'onepiece'", required=True)
     parser.add_argument("--get_tests", type=int,
                         help="Test the scraper (0 or 1)", required=True)
     parser.add_argument("--main_page", type=str,
@@ -63,7 +67,7 @@ def get_args():
                         help="the html class were all the character's images are", required=False)
     parser.add_argument("--max_images", type=int,
                         help="Max number of images to be scraped", required=False)
-    
+
     #parser.add_argument("--chars-list-link", type=str, help="Page link of the character list", required=True)
     #parser.add_argument("--character-class", type=str, help="Class of the characters", required=True)
     #parser.add_argument("--target-class", type=str, help="Image of the character", required=True)
@@ -113,11 +117,14 @@ def query_yes_no(question, default="yes"):
                 "Please respond with 'yes' or 'no' " "(or 'y' or 'n').\n")
 
 
-def removeAssetsFiles():
+def removeAssetsFiles(manga_scraped: str):
     """
     Getting authorization before removing files for scrapping
     """
-    assetsPath = "assets/train/jojo"
+
+    assetsPath = "assets/train/" + \
+        ("onepiece" if (slugify(manga_scraped) in [
+         "onepiece", "one-piece"]) else "jojo")
 
     if (not query_yes_no("Would you like to delete all your assets files in " + assetsPath + " ?")):
         print("Scraping has been aborted...")
@@ -132,11 +139,12 @@ def removeAssetsFiles():
 
 def scraping(args):
 
-    if(not removeAssetsFiles()):
+    if(args.manga_scraped == None or not removeAssetsFiles(args.manga_scraped)):
         return
 
+    global JOJO_CHARS_LIST_LINK, JOJO_IMAGE_NAME, JOJO_TARGET_CLASS, MAX_IMAGES
+
     if args.main_page != None:
-        global JOJO_CHARS_LIST_LINK, JOJO_IMAGE_NAME, JOJO_TARGET_CLASS, MAX_IMAGES
         JOJO_CHARS_LIST_LINK = args.main_page
     if args.image_names != None:
         JOJO_IMAGE_NAME = args.image_names
@@ -154,31 +162,34 @@ def scraping(args):
     # Measuring scraping time
     start_time = time.time()
 
-    set_const_to_utils()
-    save_dataset(True, True)
-    dataSet = create_dataset(True, False).to_JSON().replace(
-        "[", "").replace("},", "}").replace("]", "").replace("\r\n", "\n")
-    file = open("assets/train/jojo/metadata.jsonl", "a")
-    file.write(dataSet)
+    if(slugify(args.manga_scraped) in ["onepiece", "one-piece"]):
+        onepiece_scraping(MAX_IMAGES)
+    else:
+        set_const_to_utils()
+        save_dataset(True, True)
+        dataSet = create_dataset(True, False).to_JSON().replace(
+            "[", "").replace("},", "}").replace("]", "").replace("\r\n", "\n")
+        file = open("assets/train/jojo/metadata.jsonl", "a")
+        file.write(dataSet)
 
-    if(os.path.exists("assets/train/jojo/" + JOJO_CHAR_NAME_FILENAME)):
-        os.remove("assets/train/jojo/" + JOJO_CHAR_NAME_FILENAME)
+        if(os.path.exists("assets/train/jojo/" + JOJO_CHAR_NAME_FILENAME)):
+            os.remove("assets/train/jojo/" + JOJO_CHAR_NAME_FILENAME)
 
-    print("Data scraped successfuly in %.5s seconds!" %
+    print("Scraping finished successfuly in %.4s seconds!" %
           (time.time() - start_time))
 
 
 def main():
-
     args = get_args()
     if args.action == "scraping":
         scraping(args)
         if args.get_tests == 1:
             ScrapperTest.test_web_scraping()
-    else :
+    else:
         export_dataset()
-        
-        # unittest.main()
+
+    unittest.main()
+
 
 if(__name__ == "__main__"):
     main()
