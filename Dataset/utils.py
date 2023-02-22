@@ -20,7 +20,8 @@ def caption_dataset(image_path):
 
         image = Image.open(image_path)
 
-        inputs = processor(images=image, return_tensors="pt")
+        inputs = processor(
+            images=image, padding="max_new_tokens", return_tensors="pt")
 
         output = model.generate(**inputs)
 

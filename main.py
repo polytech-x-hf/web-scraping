@@ -24,6 +24,7 @@ import sys
 import argparse
 import time
 from tests.test_scrapper import test_web_scraping
+from scraper.script_onepiece import run_scraping as onepiece_scraping
 
 DATASET_PATH = "./assets"
 DATASET_IMAGE_EXTENSION = ".jpg"
