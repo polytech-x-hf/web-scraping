@@ -66,6 +66,7 @@ class ScrapperTest(unittest.TestCase):
 
         ScrapperTest.test_get_characters_links()
         ScrapperTest.test_get_image_from_link()
+        print("Test completed !")
     
 
 #def main():
