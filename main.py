@@ -186,7 +186,7 @@ def main():
         if args.get_tests == 1:
             ScrapperTest.test_web_scraping()
     else:
-        export_dataset()
+        export_dataset(slugify(args.manga_scraped))
 
     unittest.main()
 

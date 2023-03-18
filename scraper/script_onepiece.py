@@ -5,6 +5,8 @@ from urllib.parse import urlparse
 from urllib.request import urlretrieve
 from slugify import slugify
 from Dataset.utils import caption_dataset
+from transformers import AutoProcessor, BlipForConditionalGeneration
+from PIL import Image
 
 
 def get_profile_links(url: str):
@@ -56,7 +58,8 @@ def get_image_from_link(links: list[str], save_path: str, max_images: int = -1):
 
         character_images = soup.select(".pi-navigation img")
 
-        image = character_images[0] # Getting onlye the 'anime' version if manga is also available
+        # Getting onlye the 'anime' version if manga is also available
+        image = character_images[0]
 
         image_url = image["src"]
         image_name = image["alt"].split(".")[0]
@@ -81,15 +84,31 @@ def create_metadata_from_images(save_path: str, images_filename: list[str], imag
     print("Dataset creation currently processing...")
     start_time = time.time()
     metadata_file = open(save_path + "/metadata.jsonl", "a")
-    for i in range(0, len(images_filename)):
-        caption = caption_dataset(save_path + "/"+images_filename[i])
 
-        data_input = """
-{
-    "char_name": %s,
-    "file_name": %s,
-    "caption": %s
-}""" % (images_name[i], images_filename[i], caption)
+    # BLIP caption generation
+    processor = AutoProcessor.from_pretrained(
+        "Salesforce/blip-image-captioning-large")
+    model = BlipForConditionalGeneration.from_pretrained(
+        "Salesforce/blip-image-captioning-large")
+
+    images = [Image.open(save_path + "/" + image_filename)
+              for image_filename in images_filename]
+
+    inputs = processor(
+        images=images,  return_tensors="pt")
+
+    output = model.generate(
+        **inputs, max_new_tokens=50)
+
+    captions = processor.batch_decode(output, skip_special_tokens=True)
+
+    print(len(images_filename) % 50)
+    print(images_filename)
+
+    # 'metadata.jsonl' file creation
+    for i, caption in enumerate(captions):
+        data_input = """{"char_name": "%s", "file_name": "%s", "text": "%s"}\n""" % (
+            images_name[i], images_filename[i], caption)
 
         metadata_file.write(data_input)
 
