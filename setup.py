@@ -9,12 +9,12 @@ DESCRIPTION = 'A package for the model with Jojo and One Piece'
 setup(
     name="Jojo&OnePieceModel",
     version = VERSION,
-    # author = "",
-    # author_mail = "",
+    author = "Polytech-x-hf-MAIN4",
+    #author_mail = "",
     url="https://github.com/polytech-x-hf/web-scraping",
     description = DESCRIPTION,
     packages = find_packages(),
-    install_requires=[],
+    install_requires=find_packages(),
     keywords=['python', 'stable diffusion'],
     
 )
