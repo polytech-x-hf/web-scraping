@@ -19,19 +19,18 @@ def get_profile_links(url: str):
     url_domain = urlparse(url).scheme + "://" + urlparse(url).netloc
 
     req = requests.get(url)
+
     html_doc = req.text
     soup = BeautifulSoup(html_doc, 'html.parser')
 
-    tables = soup.find_all(
-        'table', class_="wikitable sortable", recursive=True)
+    # category-page__member-link
+    html_links = soup.find_all(
+        'a', class_="category-page__member-link", recursive=True)
 
-    for table in tables:
-        images = table.findAll("img", class_="lazyload")
-        for img in images:
-            link = img.find_parent("a")
-            if(link is not None):
-                profile_link = url_domain + link["href"]
-                len(profile_link.split("/")) == 6 and results.append(profile_link)
+    for link in html_links:
+        if(link is not None):
+            profile_link = url_domain + link["href"]
+            len(profile_link.split("/")) == 6 and results.append(profile_link)
 
     print("[TIME] get_profile_links(): %.5ss" %
           (time.time() - start_time))
@@ -50,25 +49,34 @@ def get_image_from_link(links: list[str], save_path: str, max_images: int = -1):
     images_filename = []
     images_name = []
 
-    for i in range(0, max_to_download):
+    i = 0
+
+    while(len(images_filename) < max_to_download and i < len(links)-1):
         req = requests.get(links[i])
         html_doc = req.text
         soup = BeautifulSoup(html_doc, 'html.parser')
 
-        character_images = soup.select(".pi-navigation img")
+        character_images = soup.select("img.pi-image-thumbnail")
+        character_name = soup.select("h2.pi-title")
 
-        # Getting onlye the 'anime' version if manga is also available
-        image = character_images[0]
+        if(len(character_images) > 0):
+            # Getting only the 'anime' version if manga is also available
+            image = character_images[0]
 
-        image_url = image["src"]
-        image_name = image["alt"].split(".")[0]
-        image_filename = slugify(
-            image["data-image-name"].split(".")[0]) + "." + image["data-image-name"].split(".")[1]
+            data_image_name = [''.join(
+                image["data-image-name"].split(".")[:-1]), image["data-image-name"].split(".")[-1]]
 
-        if(len(image_url.split("/")) == 10 or len(image_url.split("/")) == 12):
-            urlretrieve(image_url, save_path + "/" + image_filename)
-            images_filename.append(image_filename)
-            images_name.append(image_name)
+            image_url = image["src"]
+            image_name = character_name[0].text
+            image_filename = slugify(
+                data_image_name[0]) + "." + data_image_name[1]
+
+            if(len(image_url.split("/")) == 10 or len(image_url.split("/")) == 12):
+                urlretrieve(image_url, save_path + "/" + image_filename)
+                images_filename.append(image_filename)
+                images_name.append(image_name)
+
+        i += 1
 
     print("[TIME] get_image_from_link(): %.5ss" %
           (time.time() - start_time))
@@ -76,11 +84,11 @@ def get_image_from_link(links: list[str], save_path: str, max_images: int = -1):
     return save_path, images_filename, images_name
 
 
-def onepiece_scraping(max_images: int):
+def jojo_scraping(max_images: int):
     profile_links = get_profile_links(
-        "https://onepiece.fandom.com/fr/wiki/Liste_des_Personnages_Canon")
+        "https://jjba.fandom.com/fr/wiki/Cat%C3%A9gorie:Personnages")
 
     save_path, images_filename, images_name = get_image_from_link(
-        profile_links, "assets/train/onepiece", max_images)
+        profile_links, "assets/train/jojo", max_images)
 
     return save_path, images_filename, images_name
