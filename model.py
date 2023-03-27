@@ -1,15 +1,16 @@
-from datasets import load_dataset
-from PIL import Image
-import io
+import torch
+from diffusers import StableDiffusionPipeline
 
-# def convert_image(sample):
-#   sample["image"] = Image.open(io.BytesIO(sample["image"]["bytes"]))
-#   print("test")
-#   return sample
+# print(torch.backends.mps.is_built())
+model_id = "CompVis/stable-diffusion-v1-4"
+device = "mps"
 
-URL_pokemon = "lambdalabs/pokemon-blip-captions"
-URL_jojo = "polytechXhf/jojos-dataset-small"
-ds = load_dataset(URL_jojo, split="train")
-sample = ds[0]
-# display(sample["image"].resize((256, 256)))
-print(sample["image"])
+
+pipe = StableDiffusionPipeline.from_pretrained(
+    model_id, torch_dtype=torch.float16)
+pipe = pipe.to(device)
+
+prompt = "a photo of an astronaut riding a horse on mars"
+image = pipe(prompt).images[0]
+
+image.save("astronaut_rides_horse.png")
