@@ -4,6 +4,8 @@ tempCodeRunnerFile.py
 __pycache__
 /Class/__pycache__
 /.vscode
+/Jojo_OnePieceModel.egg-info
+/dist
 
 *.jpg
 *.jpeg
