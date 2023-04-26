@@ -73,6 +73,8 @@ def scraping(args):
 
         if args.max_images != None:
             MAX_IMAGES = args.max_images
+        else: 
+            MAX_IMAGES = -1
 
         print("Scraping in progress...")
 
