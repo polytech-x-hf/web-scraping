@@ -30,6 +30,8 @@ def get_args():
                         help="Script action: either 'scraping', 'export_dataset', 'scrap_and_export' or 'test_model'", required=True)
     parser.add_argument("--manga_scraped", type=str,
                         help="Scrap either 'jojo' or 'onepiece'", required=False)
+    parser.add_argument("--dataset_hub", type=str,
+                        help="Dataset hub path - Default: polytechXhf/jojos-dataset-small", required=False)
     parser.add_argument("--get_tests", type=int,
                         help="Test the scraper (0 or 1)", required=False)
     parser.add_argument("--max_images", type=int,

@@ -61,9 +61,7 @@ def removeAssetsFiles(manga_scraped: str):
 
 def scraping(args):
 
-    HUB_PATH = "polytechXhf/jojos-dataset"
-    HUB_PATH_TEST = "polytechXhf/jojos-dataset-small"
-    HUB_PATH_MIX = "polytechXhf/onepiece-x-jojo-dataset"
+    HUB_PATH = args.dataset_hub if args.dataset_hub else "polytechXhf/jojos-dataset-small"
 
     global MAX_IMAGES, MANGA_SCRAPED
 
@@ -73,7 +71,7 @@ def scraping(args):
 
         if args.max_images != None:
             MAX_IMAGES = args.max_images
-        else: 
+        else:
             MAX_IMAGES = -1
 
         print("Scraping in progress...")
@@ -102,4 +100,4 @@ def scraping(args):
             MANGA_SCRAPED = "jojo"
 
     if(args.action in ["export_dataset", "scrap_and_export"]):
-        export_dataset(MANGA_SCRAPED, HUB_PATH_TEST)
+        export_dataset(MANGA_SCRAPED, HUB_PATH)

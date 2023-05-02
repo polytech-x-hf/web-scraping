@@ -51,7 +51,7 @@ def get_image_from_link(links: list[str], save_path: str, max_images: int = -1):
     if not isExist:
         # Create a new directory because it does not exist
         os.makedirs(save_path)
-        
+
     start_time = time.time()
     max_to_download = len(links) if max_images < 0 else max_images
 
@@ -65,18 +65,23 @@ def get_image_from_link(links: list[str], save_path: str, max_images: int = -1):
 
         character_images = soup.select(".pi-navigation img")
 
-        # Getting onlye the 'anime' version if manga is also available
-        image = character_images[0]
+        if(len(character_images) == 0):
+            print("No image found for this character")
+            continue
 
-        image_url = image["src"]
-        image_name = image["alt"].split(".")[0]
-        image_filename = slugify(
-            image["data-image-name"].split(".")[0]) + "." + image["data-image-name"].split(".")[1]
+        else:
+            # Getting onlye the 'anime' version if manga is also available
+            image = character_images[0]
 
-        if(len(image_url.split("/")) == 10 or len(image_url.split("/")) == 12):
-            urlretrieve(image_url, save_path + "/" + image_filename)
-            images_filename.append(image_filename)
-            images_name.append(image_name)
+            image_url = image["src"]
+            image_name = image["alt"].split(".")[0]
+            image_filename = slugify(
+                image["data-image-name"].split(".")[0]) + "." + image["data-image-name"].split(".")[1]
+
+            if(len(image_url.split("/")) == 10 or len(image_url.split("/")) == 12):
+                urlretrieve(image_url, save_path + "/" + image_filename)
+                images_filename.append(image_filename)
+                images_name.append(image_name)
 
     print("[TIME] get_image_from_link(): %.5ss" %
           (time.time() - start_time))
