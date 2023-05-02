@@ -17,8 +17,9 @@
 import argparse
 from tests.test_dataset import *
 from tests.test_scrapper import *
-
 from Scraper.main import scraping
+from models.finetuned import *
+from models.sd import *
 
 MAX_IMAGES = -1
 
@@ -26,13 +27,17 @@ MAX_IMAGES = -1
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--action", type=str,
-                        help="Script action: either 'scraping', 'export_dataset', 'scrap_and_export' or 'training'", required=True)
+                        help="Script action: either 'scraping', 'export_dataset', 'scrap_and_export' or 'test_model'", required=True)
     parser.add_argument("--manga_scraped", type=str,
-                        help="Scrap either 'jojo' or 'onepiece'", required=True)
+                        help="Scrap either 'jojo' or 'onepiece'", required=False)
     parser.add_argument("--get_tests", type=int,
-                        help="Test the scraper (0 or 1)", required=True)
+                        help="Test the scraper (0 or 1)", required=False)
     parser.add_argument("--max_images", type=int,
                         help="Max number of images to be scraped", required=False)
+    parser.add_argument("--test_prompt", type=str,
+                        help="The prompt used for the model test", required=False)
+    parser.add_argument("--torch_device", type=str,
+                        help="When testing model, 'pipe.to()' device: cuda, mps (MacOS M1), etc...", required=False)
 
     return parser.parse_args()
 
@@ -43,8 +48,14 @@ def main():
         scraping(args)
         if args.get_tests == 1:
             print("tests...")
-    else:
-        print("Training is coming...")
+    elif args.action == "test_model":
+        prompt = args.test_prompt if args.test_prompt else "a photo of an astronaut riding a horse on mars"
+        torchDevice = args.torch_device if args.torch_device else "cuda"
+        print("Prompt:", prompt)
+        print("PyTorch device:", torchDevice)
+        model_finetuned(prompt, torchDevice)
+        model_SD(prompt, torchDevice)
+        print("Images exported to 'model_base.png' and 'model_finetuned.png'")
 
 
 if(__name__ == "__main__"):
