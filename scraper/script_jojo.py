@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 from urllib.request import urlretrieve
 from slugify import slugify
 
-from Scraper.export_dataset import create_metadata_from_images
+from scraper.export_dataset import create_metadata_from_images
 
 
 def get_profile_links(url: str):
@@ -44,13 +44,13 @@ def get_image_from_link(links: list[str], save_path: str, max_images: int = -1):
         Function that download all images based on links
         Returns image path, image filename and image name
     """
-    
+
     # Check whether the specified path exists or not
     isExist = os.path.exists(save_path)
     if not isExist:
         # Create a new directory because it does not exist
         os.makedirs(save_path)
-        
+
     start_time = time.time()
     max_to_download = len(links) if max_images < 0 else max_images
 

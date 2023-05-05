@@ -1,11 +1,11 @@
-/assets/train/jojo/*
-/assets/train/onepiece/*
+/assets/*
 tempCodeRunnerFile.py
 __pycache__
 /Class/__pycache__
 /.vscode
 /Jojo_OnePieceModel.egg-info
 /dist
+/build
 
 *.jpg
 *.jpeg

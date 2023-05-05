@@ -1,10 +1,10 @@
 import os
 import sys
 import time
-import slugify
-from Scraper.script_onepiece import *
-from Scraper.script_jojo import jojo_scraping
-from Scraper.export_dataset import create_metadata_from_images, export_dataset
+from slugify import slugify
+from scraper.script_onepiece import onepiece_scraping
+from scraper.script_jojo import jojo_scraping
+from scraper.export_dataset import create_metadata_from_images, export_dataset
 
 
 def query_yes_no(question, default="yes"):

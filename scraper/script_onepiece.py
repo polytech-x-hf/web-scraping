@@ -5,8 +5,7 @@ import os
 from urllib.parse import urlparse
 from urllib.request import urlretrieve
 from slugify import slugify
-
-from Scraper.export_dataset import create_metadata_from_images
+from scraper.export_dataset import create_metadata_from_images
 
 
 def get_profile_links(url: str):

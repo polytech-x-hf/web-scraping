@@ -17,7 +17,7 @@
 import argparse
 from tests.test_dataset import *
 from tests.test_scrapper import *
-from Scraper.main import scraping
+from scraper.main import scraping
 from models.finetuned import *
 from models.sd import *
 

@@ -15,7 +15,7 @@ def model_finetuned(prompt: str, torchDevice: str):
         repo_id="polytechXhf/stable-diffusion-jojo-adapter-1", filename="pytorch_lora_weights.bin")
 
     pipe.unet.load_attn_procs(model_path)
-    pipe.to("mps")
+    pipe.to(torchDevice)
 
     image = pipe(prompt, num_inference_steps=25,
                  guidance_scale=7.5).images[0]

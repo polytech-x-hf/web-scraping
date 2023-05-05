@@ -2,6 +2,7 @@ import time
 from transformers import AutoProcessor, BlipForConditionalGeneration
 from PIL import Image
 from datasets import load_dataset
+import torch
 
 
 def create_metadata_from_images(save_path: str, images_filename: list[str], images_name: list[str]):
@@ -13,21 +14,28 @@ def create_metadata_from_images(save_path: str, images_filename: list[str], imag
     metadata_file = open(save_path + "/metadata.jsonl", "a")
 
     # BLIP caption generation
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    mini_batch = 16
+
     processor = AutoProcessor.from_pretrained(
         "Salesforce/blip-image-captioning-large")
     model = BlipForConditionalGeneration.from_pretrained(
-        "Salesforce/blip-image-captioning-large")
+        "Salesforce/blip-image-captioning-large").to(device)
 
     images = [Image.open(save_path + "/" + image_filename)
               for image_filename in images_filename]
+    
+    captions = []
 
-    inputs = processor(
-        images=images,  return_tensors="pt")
+    for i in range(0, len(images), mini_batch):
 
-    output = model.generate(
-        **inputs, max_new_tokens=50)
+        inputs = processor(images=images,  return_tensors="pt").to(device)
 
-    captions = processor.batch_decode(output, skip_special_tokens=True)
+        output = model.generate(**inputs, max_new_tokens=50)
+
+        mini_batch_captions = processor.batch_decode(output, skip_special_tokens=True)
+
+        captions.extend(mini_batch_captions)
 
     # 'metadata.jsonl' file creation
     for i, caption in enumerate(captions):
