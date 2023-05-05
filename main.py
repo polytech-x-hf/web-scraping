@@ -15,11 +15,9 @@
 """ Web scraping tool to scrap any text / image pair from the web"""
 
 import argparse
-from tests.test_dataset import *
-from tests.test_scrapper import *
 from scraper.main import scraping
-from models.finetuned import *
-from models.sd import *
+from models.finetuned import model_finetuned
+from models.sd import model_SD
 
 MAX_IMAGES = -1
 
