@@ -38,6 +38,8 @@ def get_args():
                         help="The prompt used for the model test", required=False)
     parser.add_argument("--torch_device", type=str,
                         help="When testing model, 'pipe.to()' device: cuda, mps (MacOS M1), etc...", required=False)
+    parser.add_argument("--precision", type=str,
+                        help="Either 'float16' (recommended for CUDA) or 'float32'", required=False)
 
     return parser.parse_args()
 

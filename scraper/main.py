@@ -88,7 +88,7 @@ def scraping(args):
             save_path, images_filename, images_name = jojo_scraping(MAX_IMAGES)
             MANGA_SCRAPED = "jojo"
 
-        create_metadata_from_images(save_path, images_filename, images_name)
+        create_metadata_from_images(save_path, images_filename, images_name, args.precision)
 
         print("Scraping finished successfuly in %.4s seconds!" %
               (time.time() - start_time))

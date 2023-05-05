@@ -3,9 +3,10 @@ from transformers import AutoProcessor, BlipForConditionalGeneration
 from PIL import Image
 from datasets import load_dataset
 import torch
+from tqdm import tqdm
 
 
-def create_metadata_from_images(save_path: str, images_filename: list[str], images_name: list[str]):
+def create_metadata_from_images(save_path: str, images_filename: list[str], images_name: list[str], precision: str):
     """
         Function that create the 'metadata.jsonl' file for Dataset from images informations
     """
@@ -20,27 +21,31 @@ def create_metadata_from_images(save_path: str, images_filename: list[str], imag
     processor = AutoProcessor.from_pretrained(
         "Salesforce/blip-image-captioning-large")
     model = BlipForConditionalGeneration.from_pretrained(
-        "Salesforce/blip-image-captioning-large").to(device)
+        "Salesforce/blip-image-captioning-large", torch_dtype=torch.float16 if precision == "float16" else torch.float32).to(device).to(device)
 
-    images = [Image.open(save_path + "/" + image_filename)
-              for image_filename in images_filename]
-    
     captions = []
 
-    for i in range(0, len(images), mini_batch):
+    for i in tqdm(range(0, len(images_filename), mini_batch)):
 
-        inputs = processor(images=images,  return_tensors="pt").to(device)
+        mini_batch_images = [Image.open(save_path + "/" + image_filename)
+                             for image_filename in images_filename[i:i+mini_batch]]
 
-        output = model.generate(**inputs, max_new_tokens=50)
+        inputs = processor(
+            images=mini_batch_images,  return_tensors="pt").to(device, torch.float16 if precision == "float16" else torch.float32)
 
-        mini_batch_captions = processor.batch_decode(output, skip_special_tokens=True)
+        output = model.generate(
+            **inputs, max_new_tokens=50)
+
+        mini_batch_captions = processor.batch_decode(
+            output, skip_special_tokens=True)
 
         captions.extend(mini_batch_captions)
 
     # 'metadata.jsonl' file creation
-    for i, caption in enumerate(captions):
+    print("'metadata.jsonl' file creation in progress...")
+    for i in tqdm(range(0, len(captions))):
         data_input = """{"char_name": "%s", "file_name": "%s", "text": "%s"}\n""" % (
-            images_name[i], images_filename[i], caption)
+            images_name[i], images_filename[i], captions[i])
 
         metadata_file.write(data_input)
 
