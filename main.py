@@ -18,6 +18,7 @@ import argparse
 from scraper.main import scraping
 from models.finetuned import model_finetuned
 from models.sd import model_SD
+from models.gradio import runGradio
 
 MAX_IMAGES = -1
 
@@ -43,10 +44,14 @@ def get_args():
 
     return parser.parse_args()
 
+# python3 main.py --action="test_model" --test_prompt="a close up of donal trump smiling" --torch_device="mps"
+
 
 def main():
     args = get_args()
-    if args.action in ["scraping", "export_dataset", "scrap_and_export"]:
+    if args.action == "demo":
+        runGradio()
+    elif args.action in ["scraping", "export_dataset", "scrap_and_export"]:
         scraping(args)
         if args.get_tests == 1:
             print("tests...")
